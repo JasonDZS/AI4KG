@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API 测试</title>
+</head>
+<body>
+    <h1>AI4KG API 测试</h1>
+    <div id="results"></div>
+
+    <script>
+        const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzYWJiYmU3OS0yYzY4LTRhMGQtOTNmNy1jYTQzZWM2MTE5OGEiLCJ1c2VybmFtZSI6InRlc3R1c2VyIiwiZXhwIjoxNzUyMzkwOTAyfQ.G2XG4JWznrnUCn0QI_TtTwGp5AeGRTO1yfeaUS2WOww';
+        
+        async function testAPI() {
+            const results = document.getElementById('results');
+            
+            try {
+                // 测试图谱列表
+                const listResponse = await fetch('http://localhost:8000/api/graphs', {
+                    headers: { 'Authorization': `Bearer ${token}` }
+                });
+                const listData = await listResponse.json();
+                
+                results.innerHTML += `<h2>图谱列表 (${listData.data.total} 个)</h2>`;
+                listData.data.graphs.forEach(graph => {
+                    results.innerHTML += `<p>- ${graph.title} (${graph.metadata.node_count} 节点, ${graph.metadata.edge_count} 边)</p>`;
+                });
+                
+                // 测试获取第一个图谱的详细数据
+                if (listData.data.graphs.length > 0) {
+                    const graphId = listData.data.graphs[0].id;
+                    const graphResponse = await fetch(`http://localhost:8000/api/graphs/${graphId}`, {
+                        headers: { 'Authorization': `Bearer ${token}` }
+                    });
+                    const graphData = await graphResponse.json();
+                    
+                    results.innerHTML += `<h2>图谱详情: ${graphData.data.title}</h2>`;
+                    results.innerHTML += `<p>节点数: ${graphData.data.nodes.length}</p>`;
+                    results.innerHTML += `<p>边数: ${graphData.data.edges.length}</p>`;
+                    results.innerHTML += `<h3>示例节点:</h3>`;
+                    results.innerHTML += `<pre>${JSON.stringify(graphData.data.nodes[0], null, 2)}</pre>`;
+                    results.innerHTML += `<h3>示例边:</h3>`;
+                    results.innerHTML += `<pre>${JSON.stringify(graphData.data.edges[0], null, 2)}</pre>`;
+                }
+                
+            } catch (error) {
+                results.innerHTML += `<p style="color: red;">错误: ${error.message}</p>`;
+            }
+        }
+        
+        testAPI();
+    </script>
+</body>
+</html>

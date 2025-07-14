@@ -1,0 +1,3302 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d11" for="edge" attr.name="created_at" attr.type="long"/>
+<key id="d10" for="edge" attr.name="file_path" attr.type="string"/>
+<key id="d9" for="edge" attr.name="source_id" attr.type="string"/>
+<key id="d8" for="edge" attr.name="keywords" attr.type="string"/>
+<key id="d7" for="edge" attr.name="description" attr.type="string"/>
+<key id="d6" for="edge" attr.name="weight" attr.type="double"/>
+<key id="d5" for="node" attr.name="created_at" attr.type="long"/>
+<key id="d4" for="node" attr.name="file_path" attr.type="string"/>
+<key id="d3" for="node" attr.name="source_id" attr.type="string"/>
+<key id="d2" for="node" attr.name="description" attr.type="string"/>
+<key id="d1" for="node" attr.name="entity_type" attr.type="string"/>
+<key id="d0" for="node" attr.name="entity_id" attr.type="string"/>
+<graph edgedefault="undirected"><node id="算网生态大会">
+  <data key="d0">算网生态大会</data>
+  <data key="d1">event</data>
+  <data key="d2">算网生态大会是一个聚焦诠释‘三十向新’主题的论坛，围绕《算网融合发展行动计划》等战略内容，面向合作伙伴传达最新技术和应用成果。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="联通云智算能力">
+  <data key="d0">联通云智算能力</data>
+  <data key="d1">category</data>
+  <data key="d2">联通云智算能力是指联通在云计算和智能计算方面的提升能力。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="算网基础设施新底座">
+  <data key="d0">算网基础设施新底座</data>
+  <data key="d1">category</data>
+  <data key="d2">算网基础设施新底座指的是算力网络的基础架构升级。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="数据要素开发利用和流通">
+  <data key="d0">数据要素开发利用和流通</data>
+  <data key="d1">category</data>
+  <data key="d2">数据要素开发利用和流通指的是数据资源的有效开发和流通机制。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="大模型">
+  <data key="d0">大模型</data>
+  <data key="d1">category</data>
+  <data key="d2">大模型是指大规模训练的机器学习模型。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="智算五大产品">
+  <data key="d0">智算五大产品</data>
+  <data key="d1">category</data>
+  <data key="d2">智算五大产品是联通发布的五款智能化计算产品。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="宽带核心网(BNC)">
+  <data key="d0">宽带核心网(BNC)</data>
+  <data key="d1">category</data>
+  <data key="d2">宽带核心网(BNC)是一种先进的网络架构。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="自智网络白皮书">
+  <data key="d0">自智网络白皮书</data>
+  <data key="d1">category</data>
+  <data key="d2">自智网络白皮书是关于自智网络的技术文档。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="陈忠岳董事长">
+  <data key="d0">陈忠岳董事长</data>
+  <data key="d1">person</data>
+  <data key="d2">陈忠岳是联通的董事长。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="唐永博副总经理">
+  <data key="d0">唐永博副总经理</data>
+  <data key="d1">person</data>
+  <data key="d2">唐永博是联通的副总经理。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="中国电子技术标准化研究院院长">
+  <data key="d0">中国电子技术标准化研究院院长</data>
+  <data key="d1">person</data>
+  <data key="d2">中国电子技术标准化研究院院长负责该机构的技术标准工作。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="中兴总裁徐子阳">
+  <data key="d0">中兴总裁徐子阳</data>
+  <data key="d1">person</data>
+  <data key="d2">徐子阳是中兴公司的总裁。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="网络部">
+  <data key="d0">网络部</data>
+  <data key="d1">organization</data>
+  <data key="d2">网络部是联通的一个部门，负责网络相关事务。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="智算专班">
+  <data key="d0">智算专班</data>
+  <data key="d1">organization</data>
+  <data key="d2">智算专班是联通的一个专项团队，专注于智能计算领域。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="政企BG">
+  <data key="d0">政企BG</data>
+  <data key="d1">organization</data>
+  <data key="d2">政企BG是《工业互联网生态发展论坛》和《智赋启新车联未来-车联网创新发展论坛》的主办单位。&lt;SEP&gt;政企BG是中国联通的一个业务部门，负责政企客户的业务拓展。&lt;SEP&gt;政企BG是联通的一个业务单元，专注于政企客户。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-455a2a00f943baa51fbfc81e2ce5d649&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="数科公司">
+  <data key="d0">数科公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">数科公司是《数据要素与数字化转型论坛》的协办单位之一。&lt;SEP&gt;数科公司是一家参与数智县域创新发展论坛的组织。&lt;SEP&gt;数科公司是一家科技企业，参与了多个科技项目和活动。&lt;SEP&gt;数科公司是联通的一个子公司，专注于数字科技领域。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="市场部">
+  <data key="d0">市场部</data>
+  <data key="d1">organization</data>
+  <data key="d2">市场部是《融合开放合作共赢-渠道终端论坛》的主办单位。&lt;SEP&gt;市场部是联通的一个部门，负责市场相关事务。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="在线公司">
+  <data key="d0">在线公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">在线公司是联通的一个子公司，专注于在线业务。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="耿岩">
+  <data key="d0">耿岩</data>
+  <data key="d1">person</data>
+  <data key="d2">耿岩是联通网络部的工作人员。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="姜鹏">
+  <data key="d0">姜鹏</data>
+  <data key="d1">person</data>
+  <data key="d2">姜鹏是联通智算专班的工作人员。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="韩振东">
+  <data key="d0">韩振东</data>
+  <data key="d1">person</data>
+  <data key="d2">韩振东是联通智算专班的工作人员。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="宋丙坤">
+  <data key="d0">宋丙坤</data>
+  <data key="d1">person</data>
+  <data key="d2">宋丙坤是联通政企部门的工作人员。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="李光">
+  <data key="d0">李光</data>
+  <data key="d1">person</data>
+  <data key="d2">李光是数科公司的接口人之一。&lt;SEP&gt;李光是联通数科公司的工作人员。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="简勤总经理">
+  <data key="d0">简勤总经理</data>
+  <data key="d1">person</data>
+  <data key="d2">简勤是联通的总经理。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="叶蓁蓁">
+  <data key="d0">叶蓁蓁</data>
+  <data key="d1">person</data>
+  <data key="d2">叶蓁蓁是人民网的党委书记。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="华为终端中国区总裁徐钦松">
+  <data key="d0">华为终端中国区总裁徐钦松</data>
+  <data key="d1">person</data>
+  <data key="d2">徐钦松是华为终端中国区的总裁。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="倪嘉悦">
+  <data key="d0">倪嘉悦</data>
+  <data key="d1">person</data>
+  <data key="d2">倪嘉悦是荣耀中国区的总裁。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="华为">
+  <data key="d0">华为</data>
+  <data key="d1">organization</data>
+  <data key="d2">华为是一家全球知名的通信设备制造商。&lt;SEP&gt;华为是一家全球领先的通信设备制造商。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee&lt;SEP&gt;chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="荣耀">
+  <data key="d0">荣耀</data>
+  <data key="d1">organization</data>
+  <data key="d2">荣耀是中国知名的智能手机品牌。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="京东">
+  <data key="d0">京东</data>
+  <data key="d1">organization</data>
+  <data key="d2">京东是中国领先的电商平台。&lt;SEP&gt;京东是渠道合作伙伴之一。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="人民网">
+  <data key="d0">人民网</data>
+  <data key="d1">organization</data>
+  <data key="d2">人民网是中国重要的新闻网站。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="中国通信企业协会">
+  <data key="d0">中国通信企业协会</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国通信企业协会是中国通信行业的行业协会。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="中国工程院">
+  <data key="d0">中国工程院</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国工程院是一个学术机构，方滨兴是院士，受邀参加相关活动。&lt;SEP&gt;中国工程院是中国最高的工程技术科学院。&lt;SEP&gt;中国工程院是中国最高的工程科技学术机构。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee&lt;SEP&gt;chunk-8d9295cd5faad207dad36e4b3202cc80&lt;SEP&gt;chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="清华大学">
+  <data key="d0">清华大学</data>
+  <data key="d1">organization</data>
+  <data key="d2">清华大学是中国著名的高等学府。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="创享智慧生活-数智创新论坛">
+  <data key="d0">创享智慧生活-数智创新论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">创享智慧生活-数智创新论坛是一个聚焦诠释‘三十向新’主题的论坛，围绕公司战略内容，面向行业合作伙伴传达最新技术和发展成果。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="超高清视频产业">
+  <data key="d0">超高清视频产业</data>
+  <data key="d1">category</data>
+  <data key="d2">超高清视频产业是指超高清视频技术的应用和发展。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="5G消息行业智能体">
+  <data key="d0">5G消息行业智能体</data>
+  <data key="d1">category</data>
+  <data key="d2">5G消息行业智能体是基于5G的消息服务。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="联通认证">
+  <data key="d0">联通认证</data>
+  <data key="d1">category</data>
+  <data key="d2">联通认证是联通提供的认证服务。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="FTTR">
+  <data key="d0">FTTR</data>
+  <data key="d1">category</data>
+  <data key="d2">FTTR是光纤到房间的技术。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="智慧社区">
+  <data key="d0">智慧社区</data>
+  <data key="d1">category</data>
+  <data key="d2">智慧社区是利用智能技术提升社区管理和服务水平。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="联通数村">
+  <data key="d0">联通数村</data>
+  <data key="d1">category</data>
+  <data key="d2">联通数村是联通在农村数字化领域的解决方案。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="AIGC创作平台">
+  <data key="d0">AIGC创作平台</data>
+  <data key="d1">category</data>
+  <data key="d2">AIGC创作平台是基于人工智能的内容生成平台。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="海纳生态合作体系">
+  <data key="d0">海纳生态合作体系</data>
+  <data key="d1">category</data>
+  <data key="d2">海纳生态合作体系是联通与多个合作伙伴共同构建的生态系统。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="渠道共赢合约计划">
+  <data key="d0">渠道共赢合约计划</data>
+  <data key="d1">category</data>
+  <data key="d2">渠道共赢合约计划是联通为合作伙伴提供的优惠政策。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="泛智联盟云平台">
+  <data key="d0">泛智联盟云平台</data>
+  <data key="d1">category</data>
+  <data key="d2">泛智联盟云平台是联通为合作伙伴提供的云服务平台。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="公客">
+  <data key="d0">公客</data>
+  <data key="d1">organization</data>
+  <data key="d2">公客是联通的一个业务单元，专注于公众客户。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="融合开放合作共赢-渠道终端论坛">
+  <data key="d0">融合开放合作共赢-渠道终端论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">融合开放合作共赢-渠道终端论坛是一个关于中国联通三十向新的论坛，讨论泛智联盟终端渠道业务一体化合作运营新升级，推动终端渠道业务三个一体化经营模式转变。</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="集团公司">
+  <data key="d0">集团公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">集团公司是简勤所在的上级组织。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142752</data>
+</node>
+<node id="简勤">
+  <data key="d0">简勤</data>
+  <data key="d1">person</data>
+  <data key="d2">简勤是中国联合网络通信集团有限公司的总经理，他多次受邀作为重要嘉宾参与行业论坛，包括《人工智能创新发展论坛》、《网络安全现代产业发展暨共链行动高峰论坛》以及《数字消费论坛-开场致辞》。简勤在公司中负责整体战略和运营，确保集团公司的稳健发展。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-77c783d9c1e5a3f6976bb7021a032814&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f&lt;SEP&gt;chunk-455a2a00f943baa51fbfc81e2ce5d649&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="华为终端中国区">
+  <data key="d0">华为终端中国区</data>
+  <data key="d1">organization</data>
+  <data key="d2">华为终端中国区是徐钦松所领导的部门。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="徐钦松">
+  <data key="d0">徐钦松</data>
+  <data key="d1">person</data>
+  <data key="d2">徐钦松是华为终端中国区的总裁。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="小米">
+  <data key="d0">小米</data>
+  <data key="d1">organization</data>
+  <data key="d2">小米是终端合作伙伴之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="公客中心">
+  <data key="d0">公客中心</data>
+  <data key="d1">organization</data>
+  <data key="d2">公客中心是《融合开放合作共赢-渠道终端论坛》的协办单位之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="华盛公司">
+  <data key="d0">华盛公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">华盛公司是《融合开放合作共赢-渠道终端论坛》的协办单位之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="黄丽娟">
+  <data key="d0">黄丽娟</data>
+  <data key="d1">person</data>
+  <data key="d2">黄丽娟是公客中心的代表。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="郑涛">
+  <data key="d0">郑涛</data>
+  <data key="d1">person</data>
+  <data key="d2">郑涛是华盛公司的代表。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《融合开放合作共赢-渠道终端论坛》">
+  <data key="d0">《融合开放合作共赢-渠道终端论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《融合开放合作共赢-渠道终端论坛》是一个为期130分钟的论坛，规模为500人。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《工业互联网生态发展论坛》">
+  <data key="d0">《工业互联网生态发展论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《工业互联网生态发展论坛》是一个为期120分钟的论坛，规模为150人。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《智赋启新车联未来-车联网创新发展论坛》">
+  <data key="d0">《智赋启新车联未来-车联网创新发展论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《智赋启新车联未来-车联网创新发展论坛》是一个为期120分钟的论坛，规模为150人。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="邱锡鹏">
+  <data key="d0">邱锡鹏</data>
+  <data key="d1">person</data>
+  <data key="d2">邱锡鹏是复旦大学计算机学院教授，也是《工业互联网生态发展论坛》的外部嘉宾。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="陈清泉">
+  <data key="d0">陈清泉</data>
+  <data key="d1">person</data>
+  <data key="d2">陈清泉是中国工程院院士，也是《智赋启新车联未来-车联网创新发展论坛》的外部嘉宾。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="张永伟">
+  <data key="d0">张永伟</data>
+  <data key="d1">person</data>
+  <data key="d2">张永伟是外部嘉宾，担任中国电动汽车百人会副理事长。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="续合元">
+  <data key="d0">续合元</data>
+  <data key="d1">person</data>
+  <data key="d2">续合元是信通院首席专家，也是外部嘉宾。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="王辉">
+  <data key="d0">王辉</data>
+  <data key="d1">person</data>
+  <data key="d2">王辉是长安集团副总裁，也是外部嘉宾。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="尤峥">
+  <data key="d0">尤峥</data>
+  <data key="d1">person</data>
+  <data key="d2">尤峥是东风集团副总经理，也是外部嘉宾。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="红帽-联接">
+  <data key="d0">红帽-联接</data>
+  <data key="d1">category</data>
+  <data key="d2">红帽-联接是《工业互联网生态发展论坛》发布的产品之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="大千-运营">
+  <data key="d0">大千-运营</data>
+  <data key="d1">category</data>
+  <data key="d2">大千-运营是《工业互联网生态发展论坛》发布的产品之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="轩辕-交通">
+  <data key="d0">轩辕-交通</data>
+  <data key="d1">category</data>
+  <data key="d2">轩辕-交通是《工业互联网生态发展论坛》发布的产品之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="人车家战略">
+  <data key="d0">人车家战略</data>
+  <data key="d1">category</data>
+  <data key="d2">人车家战略是《智赋启新车联未来-车联网创新发展论坛》发布的产品之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通车生活指数">
+  <data key="d0">中国联通车生活指数</data>
+  <data key="d1">category</data>
+  <data key="d2">中国联通车生活指数是《智赋启新车联未来-车联网创新发展论坛》发布的产品之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="智网科技生态体系">
+  <data key="d0">智网科技生态体系</data>
+  <data key="d1">category</data>
+  <data key="d2">智网科技生态体系是《智赋启新车联未来-车联网创新发展论坛》发布的生态联盟。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="红帽创新成果">
+  <data key="d0">红帽创新成果</data>
+  <data key="d1">category</data>
+  <data key="d2">红帽创新成果是《工业互联网生态发展论坛》联合发布的成果之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="腾讯科恩实验室安全产品">
+  <data key="d0">腾讯科恩实验室安全产品</data>
+  <data key="d1">category</data>
+  <data key="d2">腾讯科恩实验室安全产品是《工业互联网生态发展论坛》联合发布的成果之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="海康威视联合产品">
+  <data key="d0">海康威视联合产品</data>
+  <data key="d1">category</data>
+  <data key="d2">海康威视联合产品是《工业互联网生态发展论坛》联合发布的成果之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="智网科技">
+  <data key="d0">智网科技</data>
+  <data key="d1">organization</data>
+  <data key="d2">智网科技是《智赋启新车联未来-车联网创新发展论坛》的协办单位之一。&lt;SEP&gt;智网科技是一家提供车联网技术和服务的组织。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="王柯">
+  <data key="d0">王柯</data>
+  <data key="d1">person</data>
+  <data key="d2">王柯是智网科技的代表。&lt;SEP&gt;王柯是智网科技的接口人之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="刘蕊">
+  <data key="d0">刘蕊</data>
+  <data key="d1">person</data>
+  <data key="d2">刘蕊是智网科技的代表。&lt;SEP&gt;刘蕊是智网科技的接口人之一。</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="智赋启新车联未来-车联网创新发展论坛">
+  <data key="d0">智赋启新车联未来-车联网创新发展论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">智赋启新车联未来-车联网创新发展论坛是一个车联网领域的创新发展论坛，规模为150人。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智县域向新无界-数智县域创新发展论坛">
+  <data key="d0">数智县域向新无界-数智县域创新发展论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">数智县域向新无界-数智县域创新发展论坛是一个数智县域领域的创新发展论坛，规模为150人。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数据要素与数字化转型论坛">
+  <data key="d0">数据要素与数字化转型论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">数据要素与数字化转型论坛是一个关于数据要素与数字化转型的论坛，规模为150人。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="韩再辉">
+  <data key="d0">韩再辉</data>
+  <data key="d1">person</data>
+  <data key="d2">韩再辉是数科公司的接口人之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="陈忠岳">
+  <data key="d0">陈忠岳</data>
+  <data key="d1">person</data>
+  <data key="d2">陈忠岳是《新智新业新力-产投融合论坛》的邀请嘉宾之一，担任集团公司董事长。&lt;SEP&gt;陈忠岳是中国联合网络通信集团有限公司董事长，受邀参加《网安共链论坛-开场致辞》。&lt;SEP&gt;陈忠岳是联通集团公司的董事长。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-77c783d9c1e5a3f6976bb7021a032814&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="石勇">
+  <data key="d0">石勇</data>
+  <data key="d1">person</data>
+  <data key="d2">石勇是国务院参事、发展中国家科学院院士。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通">
+  <data key="d0">中国联通</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国联通是一家大型电信运营商，提供各种通信服务和技术解决方案。&lt;SEP&gt;中国联通是一家大型电信运营商，致力于提供通信服务和技术解决方案。&lt;SEP&gt;中国联通是一家提供通信服务和技术解决方案的公司。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="软研院">
+  <data key="d0">软研院</data>
+  <data key="d1">organization</data>
+  <data key="d2">软研院是《数据要素与数字化转型论坛》的协办单位之一。&lt;SEP&gt;软研院是一家参与数据要素与数字化转型论坛的组织。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="智网">
+  <data key="d0">智网</data>
+  <data key="d1">organization</data>
+  <data key="d2">智网是《数据要素与数字化转型论坛》的协办单位之一。&lt;SEP&gt;智网是一家参与数智县域创新发展论坛的组织。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="智研院">
+  <data key="d0">智研院</data>
+  <data key="d1">organization</data>
+  <data key="d2">智研院是《数据要素与数字化转型论坛》的协办单位之一。&lt;SEP&gt;智研院是一家参与数据要素与数字化转型论坛的组织。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="华盛">
+  <data key="d0">华盛</data>
+  <data key="d1">organization</data>
+  <data key="d2">华盛是《数据要素与数字化转型论坛》的协办单位之一。&lt;SEP&gt;华盛是一家参与数据要素与数字化转型论坛的组织。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="云津公司">
+  <data key="d0">云津公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">云津公司是一家参与数智县域创新发展论坛的组织。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="国家数据局">
+  <data key="d0">国家数据局</data>
+  <data key="d1">organization</data>
+  <data key="d2">国家数据局是参与数智县域创新发展论坛的相关领导所在机构。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="生态环境部信息中心">
+  <data key="d0">生态环境部信息中心</data>
+  <data key="d1">organization</data>
+  <data key="d2">生态环境部信息中心是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国环境科学研究院">
+  <data key="d0">中国环境科学研究院</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国环境科学研究院是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="上海市文旅局信息科技处">
+  <data key="d0">上海市文旅局信息科技处</data>
+  <data key="d1">organization</data>
+  <data key="d2">上海市文旅局信息科技处是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数据空间技术与系统全国重点实验室">
+  <data key="d0">数据空间技术与系统全国重点实验室</data>
+  <data key="d1">organization</data>
+  <data key="d2">数据空间技术与系统全国重点实验室是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="电子联合会">
+  <data key="d0">电子联合会</data>
+  <data key="d1">organization</data>
+  <data key="d2">电子联合会是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="工信部电子标准院">
+  <data key="d0">工信部电子标准院</data>
+  <data key="d1">organization</data>
+  <data key="d2">工信部电子标准院是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国信息通信研究院">
+  <data key="d0">中国信息通信研究院</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国信息通信研究院是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="人工智能头部企业">
+  <data key="d0">人工智能头部企业</data>
+  <data key="d1">organization</data>
+  <data key="d2">人工智能头部企业是参与数据要素与数字化转型论坛的外部嘉宾之一。</data>
+  <data key="d3">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数据要素与数字化转型论坛》">
+  <data key="d0">《数据要素与数字化转型论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《数据要素与数字化转型论坛》是一场持续120分钟的会议，规模为150人。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="政企BG高扬">
+  <data key="d0">政企BG高扬</data>
+  <data key="d1">person</data>
+  <data key="d2">政企BG高扬是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="政企BG张晨">
+  <data key="d0">政企BG张晨</data>
+  <data key="d1">person</data>
+  <data key="d2">政企BG张晨是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字化部刘阳">
+  <data key="d0">数字化部刘阳</data>
+  <data key="d1">person</data>
+  <data key="d2">数字化部刘阳是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字化部崔惠">
+  <data key="d0">数字化部崔惠</data>
+  <data key="d1">person</data>
+  <data key="d2">数字化部崔惠是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《人工智能创新发展论坛》">
+  <data key="d0">《人工智能创新发展论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《人工智能创新发展论坛》是一场持续120分钟的会议，规模为150人。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="科技创新部赵爽">
+  <data key="d0">科技创新部赵爽</data>
+  <data key="d1">person</data>
+  <data key="d2">科技创新部赵爽是《人工智能创新发展论坛》的论坛接口人。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="科技创新部">
+  <data key="d0">科技创新部</data>
+  <data key="d1">organization</data>
+  <data key="d2">科技创新部是《人工智能创新发展论坛》的主办单位。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="人工智能创新中心">
+  <data key="d0">人工智能创新中心</data>
+  <data key="d1">organization</data>
+  <data key="d2">人工智能创新中心是《人工智能创新发展论坛》的协办单位。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《新智新业新力-产投融合论坛》">
+  <data key="d0">《新智新业新力-产投融合论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《新智新业新力-产投融合论坛》是一场持续120分钟的会议，规模为150人。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="刘涵">
+  <data key="d0">刘涵</data>
+  <data key="d1">person</data>
+  <data key="d2">刘涵是《新智新业新力-产投融合论坛》的论坛接口人之一。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="霍然">
+  <data key="d0">霍然</data>
+  <data key="d1">person</data>
+  <data key="d2">霍然是《新智新业新力-产投融合论坛》的论坛接口人之一。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="曹兴信">
+  <data key="d0">曹兴信</data>
+  <data key="d1">person</data>
+  <data key="d2">曹兴信是《新智新业新力-产投融合论坛》的邀请嘉宾之一，担任集团公司副总经理。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="资本运营部">
+  <data key="d0">资本运营部</data>
+  <data key="d1">organization</data>
+  <data key="d2">资本运营部是《新智新业新力-产投融合论坛》的主办单位。&lt;SEP&gt;资本运营部负责公司的资本运作和投资管理。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《网络安全现代产业发展暨共链行动高峰论坛》">
+  <data key="d0">《网络安全现代产业发展暨共链行动高峰论坛》</data>
+  <data key="d1">event</data>
+  <data key="d2">《网络安全现代产业发展暨共链行动高峰论坛》是一个关于网络安全产业发展的高端论坛。&lt;SEP&gt;《网络安全现代产业发展暨共链行动高峰论坛》是一场持续120分钟的会议。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="唐永博">
+  <data key="d0">唐永博</data>
+  <data key="d1">person</data>
+  <data key="d2">唐永博是《网络安全现代产业发展暨共链行动高峰论坛》的邀请嘉宾之一，担任集团公司副总经理。&lt;SEP&gt;唐永博是集团公司的副总经理，协助总经理进行日常管理和决策。</data>
+  <data key="d3">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="元景安全大模型">
+  <data key="d0">元景安全大模型</data>
+  <data key="d1">organization</data>
+  <data key="d2">元景安全大模型是一种安全技术模型，用于提升网络安全防护能力。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="墨攻">
+  <data key="d0">墨攻</data>
+  <data key="d1">product</data>
+  <data key="d2">墨攻是一款安全产品，专注于提供全面的安全解决方案。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="安全荟平台">
+  <data key="d0">安全荟平台</data>
+  <data key="d1">platform</data>
+  <data key="d2">安全荟平台是一个安全服务和产品的综合平台，提供多种安全解决方案。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="国资委">
+  <data key="d0">国资委</data>
+  <data key="d1">organization</data>
+  <data key="d2">国务院国有资产监督管理委员会负责监管中央企业国有资产，确保国有资产保值增值。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="工信部">
+  <data key="d0">工信部</data>
+  <data key="d1">organization</data>
+  <data key="d2">工业和信息化部负责制定并实施国家工业和信息化发展战略。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="工经联">
+  <data key="d0">工经联</data>
+  <data key="d1">association</data>
+  <data key="d2">工业经济联合会是工业领域的重要行业协会，促进会员单位的发展。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="行业协会">
+  <data key="d0">行业协会</data>
+  <data key="d1">association</data>
+  <data key="d2">行业协会是特定行业内的组织，旨在推动行业发展和规范市场秩序。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="院士专家">
+  <data key="d0">院士专家</data>
+  <data key="d1">person</data>
+  <data key="d2">院士专家是指在某一领域具有高深学术造诣和丰富实践经验的专家学者。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="产业链大中小企业">
+  <data key="d0">产业链大中小企业</data>
+  <data key="d1">organization</data>
+  <data key="d2">产业链大中小企业涵盖了从上游原材料供应商到下游终端用户的各类企业。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网络与信息安全部">
+  <data key="d0">网络与信息安全部</data>
+  <data key="d1">department</data>
+  <data key="d2">网络与信息安全部负责网络安全和信息安全相关工作。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="文雯">
+  <data key="d0">文雯</data>
+  <data key="d1">person</data>
+  <data key="d2">文雯是网络与信息安全部的接口人，负责协调和沟通相关事务。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="研究院">
+  <data key="d0">研究院</data>
+  <data key="d1">research_institute</data>
+  <data key="d2">研究院是一个研究机构，致力于科技创新和成果转化。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="616会议室">
+  <data key="d0">616会议室</data>
+  <data key="d1">location</data>
+  <data key="d2">616会议室是《联通云AI焕新论坛》的举办地点。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="金厅AB">
+  <data key="d0">金厅AB</data>
+  <data key="d1">location</data>
+  <data key="d2">金厅AB是《工业智能论坛》和《数字消费论坛》的举办地点。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="金厅">
+  <data key="d0">金厅</data>
+  <data key="d1">location</data>
+  <data key="d2">金厅是《工业智能论坛》和《合作伙伴大会》的举办地点。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="金厅C">
+  <data key="d0">金厅C</data>
+  <data key="d1">location</data>
+  <data key="d2">金厅C是《数智医疗论坛》和《网安共链论坛》的举办地点。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛-开场致辞">
+  <data key="d0">联通云AI焕新论坛-开场致辞</data>
+  <data key="d1">speech</data>
+  <data key="d2">联通云AI焕新论坛-开场致辞是一个关于联通云AI焕新论坛的开场致辞。&lt;SEP&gt;联通云AI焕新论坛的开场致辞环节介绍了论坛的主题和背景。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="智算行业现状和发展趋势">
+  <data key="d0">智算行业现状和发展趋势</data>
+  <data key="d1">topic</data>
+  <data key="d2">智算行业现状和发展趋势是联通云AI焕新论坛的一个重要讨论话题。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="新型一体化智算基础设施(AI Infra)">
+  <data key="d0">新型一体化智算基础设施(AI Infra)</data>
+  <data key="d1">technology</data>
+  <data key="d2">新型一体化智算基础设施(AI Infra)是联通云AI焕新论坛的一个技术亮点。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通自智网络创新实践及成果发布">
+  <data key="d0">中国联通自智网络创新实践及成果发布</data>
+  <data key="d1">product</data>
+  <data key="d2">中国联通自智网络创新实践及成果发布展示了公司在自智网络方面的最新进展。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云智能升级发布">
+  <data key="d0">联通云智能升级发布</data>
+  <data key="d1">product</data>
+  <data key="d2">联通云智能升级发布展示了公司在云计算领域的技术创新。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴分享智算场景实践与展望">
+  <data key="d0">合作伙伴分享智算场景实践与展望</data>
+  <data key="d1">activity</data>
+  <data key="d2">合作伙伴分享智算场景实践与展望是联通云AI焕新论坛的一个互动环节。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国制造业数字化转型及工业AI发展趋势">
+  <data key="d0">中国制造业数字化转型及工业AI发展趋势</data>
+  <data key="d1">topic</data>
+  <data key="d2">中国制造业数字化转型及工业AI发展趋势是工业智能论坛的一个重要讨论话题。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="5G和AI技术在矿山安全领域的前瞻探索">
+  <data key="d0">5G和AI技术在矿山安全领域的前瞻探索</data>
+  <data key="d1">topic</data>
+  <data key="d2">5G和AI技术在矿山安全领域的前瞻探索是工业智能论坛的一个重要研究方向。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="5G工业智联专网系列产品发布">
+  <data key="d0">5G工业智联专网系列产品发布</data>
+  <data key="d1">product</data>
+  <data key="d2">5G工业智联专网系列产品发布展示了公司在5G技术应用方面的成果。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="基于格物平台的汽车行业高质量数据集和行业应用发布">
+  <data key="d0">基于格物平台的汽车行业高质量数据集和行业应用发布</data>
+  <data key="d1">product</data>
+  <data key="d2">基于格物平台的汽车行业高质量数据集和行业应用发布展示了公司在汽车行业的数据处理能力。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="工业行业大模型及智能体共创">
+  <data key="d0">工业行业大模型及智能体共创</data>
+  <data key="d1">activity</data>
+  <data key="d2">工业行业大模型及智能体共创是工业智能论坛的一个合作项目。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="工业具身智能机器人平台能力发布">
+  <data key="d0">工业具身智能机器人平台能力发布</data>
+  <data key="d1">product</data>
+  <data key="d2">工业具身智能机器人平台能力发布展示了公司在机器人技术方面的创新成果。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="产学研用生态合作伙伴签约">
+  <data key="d0">产学研用生态合作伙伴签约</data>
+  <data key="d1">activity</data>
+  <data key="d2">产学研用生态合作伙伴签约是工业智能论坛的一个重要合作环节。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="大模型助力装备研发设计">
+  <data key="d0">大模型助力装备研发设计</data>
+  <data key="d1">topic</data>
+  <data key="d2">大模型助力装备研发设计是工业智能论坛的一个重要讨论话题。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="向实同行共创融合新生态">
+  <data key="d0">向实同行共创融合新生态</data>
+  <data key="d1">theme</data>
+  <data key="d2">向实同行共创融合新生态是合作伙伴大会的主题之一。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="让人工智能为医学创新插上翅膀">
+  <data key="d0">让人工智能为医学创新插上翅膀</data>
+  <data key="d1">theme</data>
+  <data key="d2">让人工智能为医学创新插上翅膀是合作伙伴大会的主题之一。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="AI驱动科技人才创新，为新质生产力提供核心引擎">
+  <data key="d0">AI驱动科技人才创新，为新质生产力提供核心引擎</data>
+  <data key="d1">theme</data>
+  <data key="d2">AI驱动科技人才创新，为新质生产力提供核心引擎是合作伙伴大会的主题之一。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠">
+  <data key="d0">5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠</data>
+  <data key="d1">theme</data>
+  <data key="d2">5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠是合作伙伴大会的主题之一。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="云网数智融合进阶，共启创新发展新范式">
+  <data key="d0">云网数智融合进阶，共启创新发展新范式</data>
+  <data key="d1">theme</data>
+  <data key="d2">云网数智融合进阶，共启创新发展新范式是合作伙伴大会的主题之一。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="创新成果发布">
+  <data key="d0">创新成果发布</data>
+  <data key="d1">activity</data>
+  <data key="d2">创新成果发布是合作伙伴大会的一个重要环节。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="融合开放，共建数字消费新生态">
+  <data key="d0">融合开放，共建数字消费新生态</data>
+  <data key="d1">theme</data>
+  <data key="d2">融合开放，共建数字消费新生态是数字消费论坛的主题之一。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="产品同行篇：主题演讲及产品发布">
+  <data key="d0">产品同行篇：主题演讲及产品发布</data>
+  <data key="d1">activity</data>
+  <data key="d2">产品同行篇：主题演讲及产品发布是数字消费论坛的一个重要环节。</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会">
+  <data key="d0">合作伙伴大会</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会是一个促进合作伙伴之间交流与合作的重要活动，包含多个环节如创新成果发布、开场致辞等。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛">
+  <data key="d0">数字消费论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛聚焦数字消费领域的发展，包含多个环节如开场致辞、融合开放、产品同行篇、终端同行篇、渠道同行篇、揭牌仪式和文创巡演等。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛">
+  <data key="d0">数智医疗论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛探讨医疗领域的智能化发展，包括开场致辞、赋能就医全流程、新质生产力与数字化未来健康、AI发展趋势及重塑未来医疗、AI大模型应用、中国联通医疗成果发布等内容。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛">
+  <data key="d0">网安共链论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛关注网络安全和区块链技术的应用与发展，包括开场致辞、院士演讲、主旨演讲、成果发布、供需对接清单发布、主题发言等环节。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛">
+  <data key="d0">联通云AI焕新论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">联通云AI焕新论坛聚焦云计算和人工智能的发展，包括开场致辞、智算行业现状和发展趋势、新型一体化智算基础设施、中国联通自智网络创新实践及成果发布、联通云智能升级发布、合作伙伴分享智算场景实践与展望等内容。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="工业智能论坛">
+  <data key="d0">工业智能论坛</data>
+  <data key="d1">event</data>
+  <data key="d2">工业智能论坛探讨工业领域的智能化应用，包括开场致辞、中国制造业数字化转型及工业AI发展趋势、5G和AI技术在矿山安全领域的前瞻探索、5G工业智联专网系列产品发布、基于格物平台的汽车行业高质量数据集和行业应用发布、工业行业大模型及智能体共创、工业具身智能机器人平台能力发布、产学研用生态合作伙伴签约、大模型助力装备研发设计等内容。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网数智融合进阶">
+  <data key="d0">网数智融合进阶</data>
+  <data key="d1">category</data>
+  <data key="d2">网数智融合进阶指的是网络与数字智能技术的深度融合，推动创新发展。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="创新发展新范式">
+  <data key="d0">创新发展新范式</data>
+  <data key="d1">category</data>
+  <data key="d2">创新发展新范式是指通过新技术和新模式推动产业和社会的持续创新和进步。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="京通健康">
+  <data key="d0">京通健康</data>
+  <data key="d1">organization</data>
+  <data key="d2">京通健康是北京市的一个健康服务平台，旨在提升医疗服务效率和质量。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="格物平台">
+  <data key="d0">格物平台</data>
+  <data key="d1">technology</data>
+  <data key="d2">格物平台是一种用于收集和分析工业数据的技术平台，支持高质量的数据集和应用发布。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="产学研用生态合作伙伴">
+  <data key="d0">产学研用生态合作伙伴</data>
+  <data key="d1">organization</data>
+  <data key="d2">产学研用生态合作伙伴是指高校、研究机构、企业和用户之间的合作网络，共同推进技术创新和应用。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="7月18日">
+  <data key="d0">7月18日</data>
+  <data key="d1">date</data>
+  <data key="d2">7月18日是论坛的主要活动日期，包含多个论坛的会议环节。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="7月19日">
+  <data key="d0">7月19日</data>
+  <data key="d1">date</data>
+  <data key="d2">7月19日是合作伙伴大会的主要活动日期。</data>
+  <data key="d3">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-向实同行共创融合新生态">
+  <data key="d0">合作伙伴大会-向实同行共创融合新生态</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-向实同行共创融合新生态是一个关于融合新生态的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-嘉宾致辞">
+  <data key="d0">合作伙伴大会-嘉宾致辞</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-嘉宾致辞是一个由贺东风(中国商用飞机有限责任公司董事长)进行致辞的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-让人工智能为医学创新插上翅膀">
+  <data key="d0">合作伙伴大会-让人工智能为医学创新插上翅膀</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-让人工智能为医学创新插上翅膀是一个关于医学创新的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎">
+  <data key="d0">合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎是一个关于科技人才创新和新质生产力的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠">
+  <data key="d0">合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠是一个关于5G和AI双轮驱动的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-云网数智融合进阶，共启创新发展新范式">
+  <data key="d0">合作伙伴大会-云网数智融合进阶，共启创新发展新范式</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-云网数智融合进阶，共启创新发展新范式是一个关于云网数智融合的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="合作伙伴大会-创新成果发布">
+  <data key="d0">合作伙伴大会-创新成果发布</data>
+  <data key="d1">event</data>
+  <data key="d2">合作伙伴大会-创新成果发布是一个关于发布创新成果的会议。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-开场致辞">
+  <data key="d0">数字消费论坛-开场致辞</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-开场致辞是一个关于数字消费论坛的开场致辞。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-融合开放，共建数字消费新生态">
+  <data key="d0">数字消费论坛-融合开放，共建数字消费新生态</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-融合开放，共建数字消费新生态是一个关于数字消费新生态的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-产品同行篇：主题演讲及产品发布">
+  <data key="d0">数字消费论坛-产品同行篇：主题演讲及产品发布</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-产品同行篇：主题演讲及产品发布是一个关于产品发布的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-终端同行篇：思享荟及情景展示">
+  <data key="d0">数字消费论坛-终端同行篇：思享荟及情景展示</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-终端同行篇：思享荟及情景展示是一个关于终端同行的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式">
+  <data key="d0">数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式是一个关于渠道同行的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-揭牌仪式">
+  <data key="d0">数字消费论坛-揭牌仪式</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-揭牌仪式是一个关于揭牌的仪式。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字消费论坛-文创巡演">
+  <data key="d0">数字消费论坛-文创巡演</data>
+  <data key="d1">event</data>
+  <data key="d2">数字消费论坛-文创巡演是一个关于文化创意演出的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-开场致辞">
+  <data key="d0">数智医疗论坛-开场致辞</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-开场致辞是一个关于数智医疗论坛的开场致辞。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-北京 京通健康 赋能就医全流程">
+  <data key="d0">数智医疗论坛-北京 京通健康 赋能就医全流程</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-北京 ‘京通健康’ 赋能就医全流程是一个关于京通健康的医疗论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-新质生产力与数字化未来健康">
+  <data key="d0">数智医疗论坛-新质生产力与数字化未来健康</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-新质生产力与数字化未来健康是一个关于新质生产力和数字化未来的医疗论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-AI发展趋势及如何重塑未来医疗">
+  <data key="d0">数智医疗论坛-AI发展趋势及如何重塑未来医疗</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-AI发展趋势及如何重塑未来医疗是一个关于AI发展趋势的医疗论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-AI大模型在辅助医疗中的应用">
+  <data key="d0">数智医疗论坛-AI大模型在辅助医疗中的应用</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-AI大模型在辅助医疗中的应用是一个关于AI大模型应用的医疗论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-中国联通医疗健康+人工智能能力体系及探索实践">
+  <data key="d0">数智医疗论坛-中国联通医疗健康+人工智能能力体系及探索实践</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-中国联通医疗健康+人工智能能力体系及探索实践是一个关于中国联通医疗健康和人工智能能力体系的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数智医疗论坛-中国联通医疗成果发布">
+  <data key="d0">数智医疗论坛-中国联通医疗成果发布</data>
+  <data key="d1">event</data>
+  <data key="d2">数智医疗论坛-中国联通医疗成果发布是一个关于中国联通医疗成果发布的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛-开场致辞">
+  <data key="d0">网安共链论坛-开场致辞</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛-开场致辞是一个关于网络安全共链论坛的开场致辞。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛-院士演讲">
+  <data key="d0">网安共链论坛-院士演讲</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛-院士演讲是一个关于网络安全共链论坛的院士演讲。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛-主旨演讲">
+  <data key="d0">网安共链论坛-主旨演讲</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛-主旨演讲是一个关于网络安全共链论坛的主旨演讲。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛-成果发布">
+  <data key="d0">网安共链论坛-成果发布</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛-成果发布是一个关于网络安全共链论坛的成果发布的环节。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛-供需对接清单发布暨合作项目签约">
+  <data key="d0">网安共链论坛-供需对接清单发布暨合作项目签约</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛-供需对接清单发布暨合作项目签约是一个关于供需对接和合作项目的签署的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="网安共链论坛-主题发言">
+  <data key="d0">网安共链论坛-主题发言</data>
+  <data key="d1">event</data>
+  <data key="d2">网安共链论坛-主题发言是一个关于网络安全共链论坛的主题发言环节。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛-智算行业现状和发展趋势">
+  <data key="d0">联通云AI焕新论坛-智算行业现状和发展趋势</data>
+  <data key="d1">event</data>
+  <data key="d2">联通云AI焕新论坛-智算行业现状和发展趋势是一个关于智算行业现状和发展趋势的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛-新型一体化智算基础设施(AI Infra)">
+  <data key="d0">联通云AI焕新论坛-新型一体化智算基础设施(AI Infra)</data>
+  <data key="d1">event</data>
+  <data key="d2">联通云AI焕新论坛-新型一体化智算基础设施(AI Infra)是一个关于新型一体化智算基础设施的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛-中国联通自智网络创新实践及成果发布">
+  <data key="d0">联通云AI焕新论坛-中国联通自智网络创新实践及成果发布</data>
+  <data key="d1">event</data>
+  <data key="d2">联通云AI焕新论坛-中国联通自智网络创新实践及成果发布是一个关于中国联通自智网络创新实践及成果发布的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛-联通云智能升级发布">
+  <data key="d0">联通云AI焕新论坛-联通云智能升级发布</data>
+  <data key="d1">event</data>
+  <data key="d2">联通云AI焕新论坛-联通云智能升级发布是一个关于联通云智能升级发布的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通云AI焕新论坛-合作伙伴分享智算场景实践与展望">
+  <data key="d0">联通云AI焕新论坛-合作伙伴分享智算场景实践与展望</data>
+  <data key="d1">event</data>
+  <data key="d2">联通云AI焕新论坛-合作伙伴分享智算场景实践与展望是一个关于合作伙伴分享智算场景实践与展望的论坛。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="陈忠岳(中国联合网络通信集团有限公司董事长)">
+  <data key="d0">陈忠岳(中国联合网络通信集团有限公司董事长)</data>
+  <data key="d1">person</data>
+  <data key="d2">陈忠岳是中国联合网络通信集团有限公司的董事长。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="贺东风(中国商用飞机有限责任公司董事长)">
+  <data key="d0">贺东风(中国商用飞机有限责任公司董事长)</data>
+  <data key="d1">person</data>
+  <data key="d2">贺东风是中国商用飞机有限责任公司的董事长。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="宁光(中国工程院院士、上海瑞金医院院长)">
+  <data key="d0">宁光(中国工程院院士、上海瑞金医院院长)</data>
+  <data key="d1">person</data>
+  <data key="d2">宁光是中国工程院院士，同时也是上海瑞金医院的院长。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="杨超斌(华为)">
+  <data key="d0">杨超斌(华为)</data>
+  <data key="d1">person</data>
+  <data key="d2">杨超斌是华为的技术专家。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联合网络通信集团有限公司">
+  <data key="d0">中国联合网络通信集团有限公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国联合网络通信集团有限公司是一家大型电信运营商。&lt;SEP&gt;中国联合网络通信集团有限公司是一家电信运营商，简勤担任高层职位，受邀参加相关活动。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee&lt;SEP&gt;chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国商用飞机有限责任公司">
+  <data key="d0">中国商用飞机有限责任公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国商用飞机有限责任公司是一家从事商用飞机研发制造的企业。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="上海瑞金医院">
+  <data key="d0">上海瑞金医院</data>
+  <data key="d1">organization</data>
+  <data key="d2">上海瑞金医院是一家医疗机构，其院长是宁光院士，受邀参加相关活动。&lt;SEP&gt;上海瑞金医院是一家知名的医疗机构。</data>
+  <data key="d3">chunk-2e177c2c7b3ba1fb377388a387a1b8ee&lt;SEP&gt;chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="宁光">
+  <data key="d0">宁光</data>
+  <data key="d1">person</data>
+  <data key="d2">宁光是中国工程院院士，现任上海瑞金医院院长，受邀参加《合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎》">
+  <data key="d0">《合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个聚焦AI和科技人才创新的合作伙伴大会，邀请了宁光等人工智能领域专家。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="人工智能领域专家">
+  <data key="d0">人工智能领域专家</data>
+  <data key="d1">category</data>
+  <data key="d2">人工智能领域专家受邀参加《合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎》，讨论AI技术的应用和发展。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="杨超斌">
+  <data key="d0">杨超斌</data>
+  <data key="d1">person</data>
+  <data key="d2">杨超斌是华为ICT BG总裁，受邀参加《合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="华为ICT BG">
+  <data key="d0">华为ICT BG</data>
+  <data key="d1">organization</data>
+  <data key="d2">华为ICT BG是华为的技术业务部门，杨超斌担任总裁，受邀参加相关活动。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠》">
+  <data key="d0">《合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于5G和AI技术应用的合作伙伴大会，邀请了杨超斌等专家。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="徐子阳">
+  <data key="d0">徐子阳</data>
+  <data key="d1">person</data>
+  <data key="d2">徐子阳是中兴通讯股份有限公司执行董事兼总裁，受邀参加《合作伙伴大会-云网数智融合进阶，共启创新发展新范式》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中兴通讯股份有限公司">
+  <data key="d0">中兴通讯股份有限公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">中兴通讯股份有限公司是一家通信设备制造商，徐子阳担任高层职位，受邀参加相关活动。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《合作伙伴大会-云网数智融合进阶，共启创新发展新范式》">
+  <data key="d0">《合作伙伴大会-云网数智融合进阶，共启创新发展新范式》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于云计算、网络和数字化融合的合作伙伴大会，邀请了徐子阳等专家。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数字消费论坛-开场致辞》">
+  <data key="d0">《数字消费论坛-开场致辞》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于数字消费的论坛，简勤作为开场致辞人。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="王利民">
+  <data key="d0">王利民</data>
+  <data key="d1">person</data>
+  <data key="d2">王利民是中国联合网络通信集团有限公司副总经理，受邀参加《数字消费论坛-融合开放，共建数字消费新生态》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数字消费论坛-融合开放，共建数字消费新生态》">
+  <data key="d0">《数字消费论坛-融合开放，共建数字消费新生态》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于数字消费生态建设的论坛，王利民作为嘉宾参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="贾志强">
+  <data key="d0">贾志强</data>
+  <data key="d1">person</data>
+  <data key="d2">贾志强是中国联合网络通信集团有限公司市场部(品牌发展部)总经理，受邀参加《数字消费论坛-产品同行篇：主题演讲及产品发布》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通市场部(品牌发展部)">
+  <data key="d0">中国联通市场部(品牌发展部)</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国联通市场部(品牌发展部)是负责市场推广和品牌发展的部门，贾志强担任总经理，受邀参加相关活动。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数字消费论坛-产品同行篇：主题演讲及产品发布》">
+  <data key="d0">《数字消费论坛-产品同行篇：主题演讲及产品发布》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于产品发布的论坛，贾志强作为嘉宾参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="王启明">
+  <data key="d0">王启明</data>
+  <data key="d1">person</data>
+  <data key="d2">王启明是中国联合网络通信集团有限公司华盛公司董事长，受邀参加《数字消费论坛-终端同行篇：思享荟及情景展示》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通华盛公司">
+  <data key="d0">中国联通华盛公司</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国联通华盛公司是负责终端业务的子公司，王启明担任董事长，受邀参加相关活动。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数字消费论坛-终端同行篇：思享荟及情景展示》">
+  <data key="d0">《数字消费论坛-终端同行篇：思享荟及情景展示》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于终端业务的论坛，王启明作为嘉宾参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="胡乐信">
+  <data key="d0">胡乐信</data>
+  <data key="d1">person</data>
+  <data key="d2">胡乐信是中国联合网络通信集团有限公司公众客户事业部总经理，受邀参加《数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通公众客户事业部">
+  <data key="d0">中国联通公众客户事业部</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国联通公众客户事业部负责面向公众客户的业务，胡乐信担任总经理，受邀参加相关活动。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式》">
+  <data key="d0">《数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于渠道合作的论坛，胡乐信作为嘉宾参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《网安共链论坛-开场致辞》">
+  <data key="d0">《网安共链论坛-开场致辞》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个网络安全和产业链合作的论坛，陈忠岳作为开场致辞人。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="方滨兴">
+  <data key="d0">方滨兴</data>
+  <data key="d1">person</data>
+  <data key="d2">方滨兴是中国工程院院士，受邀参加《网安共链论坛-院士演讲》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《网安共链论坛-院士演讲》">
+  <data key="d0">《网安共链论坛-院士演讲》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于网络安全的院士演讲论坛，方滨兴作为嘉宾参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="梁守峰">
+  <data key="d0">梁守峰</data>
+  <data key="d1">person</data>
+  <data key="d2">梁守峰是中国联合网络通信集团有限公司副总经理，受邀参加《网安共链论坛-主旨演讲》。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《网安共链论坛-主旨演讲》">
+  <data key="d0">《网安共链论坛-主旨演讲》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于网络安全的主旨演讲论坛，梁守峰作为嘉宾参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="中国联通及产业链合作伙伴">
+  <data key="d0">中国联通及产业链合作伙伴</data>
+  <data key="d1">organization</data>
+  <data key="d2">中国联通及其产业链合作伙伴共同参与了多个论坛和活动。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《网安共链论坛-供需对接清单发布暨合作项目签约》">
+  <data key="d0">《网安共链论坛-供需对接清单发布暨合作项目签约》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个关于供需对接和合作项目的论坛，中国联通及其产业链生态合作伙伴共同参与。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="上海世博中心">
+  <data key="d0">上海世博中心</data>
+  <data key="d1">location</data>
+  <data key="d2">上海世博中心是《2025中国联通合作伙伴大会》的举办地点。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《2025中国联通合作伙伴大会》">
+  <data key="d0">《2025中国联通合作伙伴大会》</data>
+  <data key="d1">event</data>
+  <data key="d2">这是一个年度合作伙伴大会，将于2025年7月18日至19日在上海世博中心举行。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="2025年7月18日至2025年7月19日">
+  <data key="d0">2025年7月18日至2025年7月19日</data>
+  <data key="d1">date</data>
+  <data key="d2">这是《2025中国联通合作伙伴大会》的具体举办日期。</data>
+  <data key="d3">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="大视频智能产品">
+  <data key="d0">大视频智能产品</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">创享智慧生活-数智创新论坛发布了大视频智能产品。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="联通智家产品">
+  <data key="d0">联通智家产品</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">创享智慧生活-数智创新论坛发布了联通智家产品的AI应用升级。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="空天通信产品">
+  <data key="d0">空天通信产品</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">创享智慧生活-数智创新论坛发布了空天通信产品的升级。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="数字文创AI +升级发布">
+  <data key="d0">数字文创AI +升级发布</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">创享智慧生活-数智创新论坛发布了数字文创的AI+升级发布。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="海康">
+  <data key="d0">海康</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">创享智慧生活-数智创新论坛邀请了海康作为合作伙伴。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="人民网党委书记叶蓁蓁">
+  <data key="d0">人民网党委书记叶蓁蓁</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">人民网党委书记叶蓁蓁参与了创享智慧生活-数智创新论坛。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="客户心选服务计划">
+  <data key="d0">客户心选服务计划</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">融合开放合作共赢-渠道终端论坛推出了客户心选服务计划。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="终端生态合作计划">
+  <data key="d0">终端生态合作计划</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">融合开放合作共赢-渠道终端论坛推出了终端生态合作计划。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="荣耀中国区总裁倪嘉悦">
+  <data key="d0">荣耀中国区总裁倪嘉悦</data>
+  <data key="d3">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d2">荣耀中国区总裁倪嘉悦参与了融合开放合作共赢-渠道终端论坛。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="荣耀中国区">
+  <data key="d0">荣耀中国区</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d2">倪嘉悦是荣耀中国区的总裁，负责该区域的业务。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="闫世宏">
+  <data key="d0">闫世宏</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d2">闫世宏作为政企BG的代表参与了《工业互联网生态发展论坛》。&lt;SEP&gt;闫世宏是政企BG的代表。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="&quot;《智赋启新车联未来-车联网创新发展论坛}'">
+  <data key="d0">"《智赋启新车联未来-车联网创新发展论坛}'</data>
+  <data key="d3">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d2">《融合开放合作共赢-渠道终端论坛》和《智赋启新车联未来-车联网创新发展论坛》都是由政企BG主办，可能有共同的参与者或合作伙伴。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《联通云AI焕新论坛》">
+  <data key="d0">《联通云AI焕新论坛》</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d2">《联通云AI焕新论坛》的会议地点是616会议室。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《工业智能论坛》">
+  <data key="d0">《工业智能论坛》</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d2">《工业智能论坛》的会议地点是金厅AB。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《数字消费论坛》">
+  <data key="d0">《数字消费论坛》</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d2">《数字消费论坛》的会议地点是金厅AB。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<node id="《合作伙伴大会》">
+  <data key="d0">《合作伙伴大会》</data>
+  <data key="d3">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d2">《合作伙伴大会》的会议地点是金厅。</data>
+  <data key="d1">UNKNOWN</data>
+  <data key="d4">graph_data.txt</data>
+  <data key="d5">1752142754</data>
+</node>
+<edge source="算网生态大会" target="联通云智算能力">
+  <data key="d6">8.0</data>
+  <data key="d7">算网生态大会涉及联通云智算能力的升级。</data>
+  <data key="d8">技术升级,智能计算</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="算网基础设施新底座">
+  <data key="d6">7.0</data>
+  <data key="d7">算网生态大会涉及算网基础设施的新底座建设。</data>
+  <data key="d8">基础设施建设,网络优化</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="数据要素开发利用和流通">
+  <data key="d6">6.0</data>
+  <data key="d7">算网生态大会关注数据要素的开发利用和流通。</data>
+  <data key="d8">数据处理,流通机制</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="大模型">
+  <data key="d6">5.0</data>
+  <data key="d7">算网生态大会可能涉及大模型的应用。</data>
+  <data key="d8">人工智能,模型应用</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="智算五大产品">
+  <data key="d6">9.0</data>
+  <data key="d7">算网生态大会发布了智算五大产品。</data>
+  <data key="d8">产品发布,技术展示</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="宽带核心网(BNC)">
+  <data key="d6">6.0</data>
+  <data key="d7">算网生态大会可能涉及宽带核心网的技术讨论。</data>
+  <data key="d8">核心网,网络技术</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="自智网络白皮书">
+  <data key="d6">8.0</data>
+  <data key="d7">算网生态大会发布了自智网络白皮书。</data>
+  <data key="d8">技术文档,自智网络</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="陈忠岳董事长">
+  <data key="d6">7.0</data>
+  <data key="d7">陈忠岳董事长参与了算网生态大会。</data>
+  <data key="d8">战略规划,领导参与</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="唐永博副总经理">
+  <data key="d6">7.0</data>
+  <data key="d7">唐永博副总经理参与了算网生态大会。</data>
+  <data key="d8">战略规划,领导参与</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="中国电子技术标准化研究院院长">
+  <data key="d6">6.0</data>
+  <data key="d7">中国电子技术标准化研究院院长参与了算网生态大会。</data>
+  <data key="d8">技术交流,标准制定</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="中兴总裁徐子阳">
+  <data key="d6">5.0</data>
+  <data key="d7">中兴总裁徐子阳参与了算网生态大会。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="网络部">
+  <data key="d6">9.0</data>
+  <data key="d7">算网生态大会由网络部主办。</data>
+  <data key="d8">主办单位,论坛组织</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="智算专班">
+  <data key="d6">8.0</data>
+  <data key="d7">算网生态大会由智算专班协办。</data>
+  <data key="d8">协办单位,技术支持</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="政企BG">
+  <data key="d6">7.0</data>
+  <data key="d7">算网生态大会由政企BG协办。</data>
+  <data key="d8">协办单位,客户服务</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="算网生态大会" target="数科公司">
+  <data key="d6">8.0</data>
+  <data key="d7">算网生态大会由数科公司协办。</data>
+  <data key="d8">协办单位,技术支持</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="政企BG" target="《工业互联网生态发展论坛》">
+  <data key="d6">9.0</data>
+  <data key="d7">政企BG是《工业互联网生态发展论坛》的主办单位。</data>
+  <data key="d8">hosting,organizational role</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="政企BG" target="《智赋启新车联未来-车联网创新发展论坛》">
+  <data key="d6">9.0</data>
+  <data key="d7">政企BG是《智赋启新车联未来-车联网创新发展论坛》的主办单位。</data>
+  <data key="d8">hosting,organizational role</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="政企BG" target="闫世宏">
+  <data key="d6">16.0</data>
+  <data key="d7">闫世宏作为政企BG的代表参与了《工业互联网生态发展论坛》。&lt;SEP&gt;闫世宏是政企BG的代表。</data>
+  <data key="d8">organizational role,participation,representative</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="政企BG" target="数智县域向新无界-数智县域创新发展论坛">
+  <data key="d6">9.0</data>
+  <data key="d7">政企BG是数智县域向新无界-数智县域创新发展论坛的主办单位。</data>
+  <data key="d8">business group,forum organizer</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="政企BG" target="数据要素与数字化转型论坛">
+  <data key="d6">9.0</data>
+  <data key="d7">政企BG是数据要素与数字化转型论坛的主办单位。</data>
+  <data key="d8">business group,forum organizer</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数科公司" target="数智县域向新无界-数智县域创新发展论坛">
+  <data key="d6">15.0</data>
+  <data key="d7">数科公司是数智县域向新无界-数智县域创新发展论坛的协办单位之一。&lt;SEP&gt;数科公司是数智县域向新无界-数智县域创新发展论坛的接口人之一。</data>
+  <data key="d8">co-organizer,interface person,organization involvement,support organization</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数科公司" target="《数据要素与数字化转型论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">数科公司是《数据要素与数字化转型论坛》的协办单位。</data>
+  <data key="d8">协办,合作</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数科公司" target="《网络安全现代产业发展暨共链行动高峰论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">数科公司协办了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">co-hosting,organizational support</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="市场部" target="《融合开放合作共赢-渠道终端论坛》">
+  <data key="d6">9.0</data>
+  <data key="d7">市场部是《融合开放合作共赢-渠道终端论坛》的主办单位。</data>
+  <data key="d8">hosting,organizational role</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="李光" target="数智县域向新无界-数智县域创新发展论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">李光是数智县域向新无界-数智县域创新发展论坛的接口人之一。</data>
+  <data key="d8">interface person,organization involvement</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="创享智慧生活-数智创新论坛">
+  <data key="d6">9.0</data>
+  <data key="d7">简勤总经理参与了创享智慧生活-数智创新论坛。</data>
+  <data key="d8">战略规划,领导参与</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="融合开放合作共赢-渠道终端论坛">
+  <data key="d6">9.0</data>
+  <data key="d7">简勤总经理参与了融合开放合作共赢-渠道终端论坛。</data>
+  <data key="d8">战略规划,领导参与</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="华为终端中国区总裁徐钦松" target="融合开放合作共赢-渠道终端论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">华为终端中国区总裁徐钦松参与了融合开放合作共赢-渠道终端论坛。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="倪嘉悦" target="荣耀中国区">
+  <data key="d6">9.0</data>
+  <data key="d7">倪嘉悦是荣耀中国区的总裁，负责该区域的业务。</data>
+  <data key="d8">leadership,regional management</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="华为" target="创享智慧生活-数智创新论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛邀请了华为作为合作伙伴。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="京东" target="融合开放合作共赢-渠道终端论坛">
+  <data key="d6">6.0</data>
+  <data key="d7">京东参与了融合开放合作共赢-渠道终端论坛。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="中国通信企业协会" target="创享智慧生活-数智创新论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">中国通信企业协会领导参与了创享智慧生活-数智创新论坛。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="中国工程院" target="创享智慧生活-数智创新论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">中国工程院院士专家参与了创享智慧生活-数智创新论坛。</data>
+  <data key="d8">学术交流,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="中国工程院" target="方滨兴">
+  <data key="d6">7.0</data>
+  <data key="d7">方滨兴是中国工程院院士。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="清华大学" target="创享智慧生活-数智创新论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">清华大学科学家参与了创享智慧生活-数智创新论坛。</data>
+  <data key="d8">学术交流,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="大视频智能产品">
+  <data key="d6">9.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了大视频智能产品。</data>
+  <data key="d8">产品发布,技术展示</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="5G消息行业智能体">
+  <data key="d6">8.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了5G消息行业智能体。</data>
+  <data key="d8">产品发布,技术展示</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="联通智家产品">
+  <data key="d6">7.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了联通智家产品的AI应用升级。</data>
+  <data key="d8">产品升级,技术展示</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="空天通信产品">
+  <data key="d6">6.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了空天通信产品的升级。</data>
+  <data key="d8">产品升级,技术展示</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="智慧社区">
+  <data key="d6">8.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了智慧社区平台的重点应用。</data>
+  <data key="d8">平台应用,社区服务</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="联通数村">
+  <data key="d6">7.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了联通数村平台的重点应用。</data>
+  <data key="d8">农村服务,平台应用</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="数字文创AI +升级发布">
+  <data key="d6">9.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛发布了数字文创的AI+升级发布。</data>
+  <data key="d8">产品升级,技术展示</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="海康">
+  <data key="d6">7.0</data>
+  <data key="d7">创享智慧生活-数智创新论坛邀请了海康作为合作伙伴。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="创享智慧生活-数智创新论坛" target="人民网党委书记叶蓁蓁">
+  <data key="d6">8.0</data>
+  <data key="d7">人民网党委书记叶蓁蓁参与了创享智慧生活-数智创新论坛。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="渠道共赢合约计划" target="融合开放合作共赢-渠道终端论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">融合开放合作共赢-渠道终端论坛推出了渠道共赢合约计划。</data>
+  <data key="d8">合作共赢,合约计划</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="融合开放合作共赢-渠道终端论坛" target="客户心选服务计划">
+  <data key="d6">9.0</data>
+  <data key="d7">融合开放合作共赢-渠道终端论坛推出了客户心选服务计划。</data>
+  <data key="d8">品牌建设,服务计划</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="融合开放合作共赢-渠道终端论坛" target="终端生态合作计划">
+  <data key="d6">9.0</data>
+  <data key="d7">融合开放合作共赢-渠道终端论坛推出了终端生态合作计划。</data>
+  <data key="d8">合作计划,生态建设</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="融合开放合作共赢-渠道终端论坛" target="荣耀中国区总裁倪嘉悦">
+  <data key="d6">7.0</data>
+  <data key="d7">荣耀中国区总裁倪嘉悦参与了融合开放合作共赢-渠道终端论坛。</data>
+  <data key="d8">合作伙伴,技术交流</data>
+  <data key="d9">chunk-8d9295cd5faad207dad36e4b3202cc80</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="集团公司" target="简勤">
+  <data key="d6">9.0</data>
+  <data key="d7">简勤是集团公司的总经理，负责集团公司的运营。</data>
+  <data key="d8">leadership,organizational role</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《融合开放合作共赢-渠道终端论坛》">
+  <data key="d6">16.0</data>
+  <data key="d7">简勤作为集团公司总经理，参与了《融合开放合作共赢-渠道终端论坛》的活动。&lt;SEP&gt;简勤参与了《融合开放合作共赢-渠道终端论坛》的活动。</data>
+  <data key="d8">leadership,participation</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《工业互联网生态发展论坛》">
+  <data key="d6">16.0</data>
+  <data key="d7">简勤作为集团公司总经理，参与了《工业互联网生态发展论坛》的活动。&lt;SEP&gt;简勤参与了《工业互联网生态发展论坛》的活动。</data>
+  <data key="d8">leadership,participation</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《智赋启新车联未来-车联网创新发展论坛》">
+  <data key="d6">16.0</data>
+  <data key="d7">简勤作为集团公司副总经理，参与了《智赋启新车联未来-车联网创新发展论坛》的活动。&lt;SEP&gt;简勤参与了《智赋启新车联未来-车联网创新发展论坛》的活动。</data>
+  <data key="d8">leadership,participation</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="数据要素与数字化转型论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">简勤是联通集团公司的总经理，也是数据要素与数字化转型论坛的邀请嘉宾之一。</data>
+  <data key="d8">board member,guest invitation</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《人工智能创新发展论坛》">
+  <data key="d6">7.0</data>
+  <data key="d7">简勤是《人工智能创新发展论坛》的邀请嘉宾之一，担任集团公司总经理。</data>
+  <data key="d8">关联,嘉宾</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《网络安全现代产业发展暨共链行动高峰论坛》">
+  <data key="d6">15.0</data>
+  <data key="d7">简勤作为集团公司总经理，出席了《网络安全现代产业发展暨共链行动高峰论坛》。&lt;SEP&gt;简勤是《网络安全现代产业发展暨共链行动高峰论坛》的邀请嘉宾之一，担任集团公司总经理。</data>
+  <data key="d8">forum attendance,leadership,关联,嘉宾</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="联通云AI焕新论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">简勤出席了联通云AI焕新论坛，可能进行了开场致辞或分享。</data>
+  <data key="d8">forum attendance,leadership</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">简勤出席了《2025中国联通合作伙伴大会》，可能进行了开场致辞或分享。</data>
+  <data key="d8">forum attendance,leadership</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="《数字消费论坛-开场致辞》">
+  <data key="d6">8.0</data>
+  <data key="d7">简勤作为中国联合网络通信集团有限公司的总经理受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="简勤" target="中国联合网络通信集团有限公司">
+  <data key="d6">7.0</data>
+  <data key="d7">简勤是中国联合网络通信集团有限公司的总经理。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="华为终端中国区" target="徐钦松">
+  <data key="d6">9.0</data>
+  <data key="d7">徐钦松是华为终端中国区的总裁，负责该区域的业务。</data>
+  <data key="d8">leadership,regional management</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="公客中心" target="《融合开放合作共赢-渠道终端论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">公客中心是《融合开放合作共赢-渠道终端论坛》的协办单位之一。</data>
+  <data key="d8">co-hosting,organizational role</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="公客中心" target="黄丽娟">
+  <data key="d6">8.0</data>
+  <data key="d7">黄丽娟是公客中心的代表。</data>
+  <data key="d8">organizational role,representative</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="华盛公司" target="《融合开放合作共赢-渠道终端论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">华盛公司是《融合开放合作共赢-渠道终端论坛》的协办单位之一。</data>
+  <data key="d8">co-hosting,organizational role</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="华盛公司" target="郑涛">
+  <data key="d6">16.0</data>
+  <data key="d7">郑涛作为华盛公司的代表参与了《融合开放合作共赢-渠道终端论坛》。&lt;SEP&gt;郑涛是华盛公司的代表。</data>
+  <data key="d8">organizational role,participation,representative</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="黄丽娟" target="《融合开放合作共赢-渠道终端论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">黄丽娟作为公客中心的代表参与了《融合开放合作共赢-渠道终端论坛》。</data>
+  <data key="d8">organizational role,participation</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《融合开放合作共赢-渠道终端论坛》" target="《工业互联网生态发展论坛》">
+  <data key="d6">7.0</data>
+  <data key="d7">《工业互联网生态发展论坛》和《融合开放合作共赢-渠道终端论坛》都是由政企BG主办，可能有共同的参与者或合作伙伴。</data>
+  <data key="d8">collaboration,common organizer</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《融合开放合作共赢-渠道终端论坛》" target="&quot;《智赋启新车联未来-车联网创新发展论坛}'">
+  <data key="d6">7.0</data>
+  <data key="d7">《融合开放合作共赢-渠道终端论坛》和《智赋启新车联未来-车联网创新发展论坛》都是由政企BG主办，可能有共同的参与者或合作伙伴。</data>
+  <data key="d8">collaboration,common organizer</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《工业互联网生态发展论坛》" target="《智赋启新车联未来-车联网创新发展论坛》">
+  <data key="d6">7.0</data>
+  <data key="d7">《智赋启新车联未来-车联网创新发展论坛》和《工业互联网生态发展论坛》都是由政企BG主办，可能有共同的参与者或合作伙伴。</data>
+  <data key="d8">collaboration,common organizer</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="智网科技" target="王柯">
+  <data key="d6">16.0</data>
+  <data key="d7">王柯作为智网科技的代表参与了《智赋启新车联未来-车联网创新发展论坛》。&lt;SEP&gt;王柯是智网科技的代表。</data>
+  <data key="d8">organizational role,participation,representative</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="智网科技" target="刘蕊">
+  <data key="d6">16.0</data>
+  <data key="d7">刘蕊作为智网科技的代表参与了《智赋启新车联未来-车联网创新发展论坛》。&lt;SEP&gt;刘蕊是智网科技的代表。</data>
+  <data key="d8">organizational role,participation,representative</data>
+  <data key="d9">chunk-455a2a00f943baa51fbfc81e2ce5d649</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="智网科技" target="智赋启新车联未来-车联网创新发展论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">智网科技是智赋启新车联未来-车联网创新发展论坛的接口人之一。</data>
+  <data key="d8">interface person,organization involvement</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="王柯" target="智赋启新车联未来-车联网创新发展论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">王柯是智赋启新车联未来-车联网创新发展论坛的接口人之一。</data>
+  <data key="d8">interface person,organization involvement</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="刘蕊" target="智赋启新车联未来-车联网创新发展论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">刘蕊是智赋启新车联未来-车联网创新发展论坛的接口人之一。</data>
+  <data key="d8">interface person,organization involvement</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智县域向新无界-数智县域创新发展论坛" target="中国联通">
+  <data key="d6">8.0</data>
+  <data key="d7">数智县域向新无界-数智县域创新发展论坛是基于中国联通的创新能力和产品优势举办的。</data>
+  <data key="d8">innovation capability,product advantage</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智县域向新无界-数智县域创新发展论坛" target="韩再辉">
+  <data key="d6">8.0</data>
+  <data key="d7">韩再辉是数智县域向新无界-数智县域创新发展论坛的接口人之一。</data>
+  <data key="d8">interface person,organization involvement</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智县域向新无界-数智县域创新发展论坛" target="陈忠岳">
+  <data key="d6">7.0</data>
+  <data key="d7">陈忠岳是联通集团公司的董事长，也是数智县域向新无界-数智县域创新发展论坛的邀请嘉宾之一。</data>
+  <data key="d8">board member,guest invitation</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智县域向新无界-数智县域创新发展论坛" target="石勇">
+  <data key="d6">7.0</data>
+  <data key="d7">石勇是国务院参事、发展中国家科学院院士，也是数智县域向新无界-数智县域创新发展论坛的邀请嘉宾之一。</data>
+  <data key="d8">guest speaker,scientific advisor</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智县域向新无界-数智县域创新发展论坛" target="云津公司">
+  <data key="d6">7.0</data>
+  <data key="d7">云津公司是数智县域向新无界-数智县域创新发展论坛的协办单位之一。</data>
+  <data key="d8">co-organizer,support organization</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数据要素与数字化转型论坛" target="中国联通">
+  <data key="d6">8.0</data>
+  <data key="d7">数据要素与数字化转型论坛是基于中国联通的数字化转型优势和数据管理实践优势举办的。</data>
+  <data key="d8">data management,digital transformation</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数据要素与数字化转型论坛" target="软研院">
+  <data key="d6">7.0</data>
+  <data key="d7">软研院是数据要素与数字化转型论坛的协办单位之一。</data>
+  <data key="d8">co-organizer,support organization</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数据要素与数字化转型论坛" target="智网">
+  <data key="d6">7.0</data>
+  <data key="d7">智网是数据要素与数字化转型论坛的协办单位之一。</data>
+  <data key="d8">co-organizer,support organization</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数据要素与数字化转型论坛" target="智研院">
+  <data key="d6">7.0</data>
+  <data key="d7">智研院是数据要素与数字化转型论坛的协办单位之一。</data>
+  <data key="d8">co-organizer,support organization</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数据要素与数字化转型论坛" target="华盛">
+  <data key="d6">7.0</data>
+  <data key="d7">华盛是数据要素与数字化转型论坛的协办单位之一。</data>
+  <data key="d8">co-organizer,support organization</data>
+  <data key="d9">chunk-0ba0d0819c4c46276e13849b28cca80f</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="陈忠岳" target="《新智新业新力-产投融合论坛》">
+  <data key="d6">7.0</data>
+  <data key="d7">陈忠岳是《新智新业新力-产投融合论坛》的邀请嘉宾之一，担任集团公司董事长。</data>
+  <data key="d8">关联,嘉宾</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="陈忠岳" target="《网安共链论坛-开场致辞》">
+  <data key="d6">8.0</data>
+  <data key="d7">陈忠岳作为中国联合网络通信集团有限公司的董事长受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="陈忠岳" target="中国联合网络通信集团有限公司">
+  <data key="d6">7.0</data>
+  <data key="d7">陈忠岳是中国联合网络通信集团有限公司的董事长。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="软研院" target="《数据要素与数字化转型论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">软研院是《数据要素与数字化转型论坛》的协办单位。</data>
+  <data key="d8">协办,合作</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="智网" target="《数据要素与数字化转型论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">智网是《数据要素与数字化转型论坛》的协办单位。</data>
+  <data key="d8">协办,合作</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="智研院" target="《数据要素与数字化转型论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">智研院是《数据要素与数字化转型论坛》的协办单位。</data>
+  <data key="d8">协办,合作</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="华盛" target="《数据要素与数字化转型论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">华盛是《数据要素与数字化转型论坛》的协办单位。</data>
+  <data key="d8">协办,合作</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《数据要素与数字化转型论坛》" target="政企BG高扬">
+  <data key="d6">14.0</data>
+  <data key="d7">政企BG高扬是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《数据要素与数字化转型论坛》" target="政企BG张晨">
+  <data key="d6">14.0</data>
+  <data key="d7">政企BG张晨是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《数据要素与数字化转型论坛》" target="数字化部刘阳">
+  <data key="d6">14.0</data>
+  <data key="d7">数字化部刘阳是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《数据要素与数字化转型论坛》" target="数字化部崔惠">
+  <data key="d6">14.0</data>
+  <data key="d7">数字化部崔惠是《数据要素与数字化转型论坛》的论坛接口人之一。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《人工智能创新发展论坛》" target="科技创新部">
+  <data key="d6">8.0</data>
+  <data key="d7">科技创新部是《人工智能创新发展论坛》的主办单位。</data>
+  <data key="d8">主办,协办</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《人工智能创新发展论坛》" target="人工智能创新中心">
+  <data key="d6">8.0</data>
+  <data key="d7">人工智能创新中心是《人工智能创新发展论坛》的协办单位。</data>
+  <data key="d8">协办,合作</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《人工智能创新发展论坛》" target="科技创新部赵爽">
+  <data key="d6">7.0</data>
+  <data key="d7">科技创新部赵爽是《人工智能创新发展论坛》的论坛接口人。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《新智新业新力-产投融合论坛》" target="刘涵">
+  <data key="d6">7.0</data>
+  <data key="d7">刘涵是《新智新业新力-产投融合论坛》的论坛接口人之一。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《新智新业新力-产投融合论坛》" target="霍然">
+  <data key="d6">7.0</data>
+  <data key="d7">霍然是《新智新业新力-产投融合论坛》的论坛接口人之一。</data>
+  <data key="d8">接口人,联系</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《新智新业新力-产投融合论坛》" target="曹兴信">
+  <data key="d6">7.0</data>
+  <data key="d7">曹兴信是《新智新业新力-产投融合论坛》的邀请嘉宾之一，担任集团公司副总经理。</data>
+  <data key="d8">关联,嘉宾</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《新智新业新力-产投融合论坛》" target="资本运营部">
+  <data key="d6">8.0</data>
+  <data key="d7">资本运营部是《新智新业新力-产投融合论坛》的主办单位。</data>
+  <data key="d8">主办,协办</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="资本运营部" target="《网络安全现代产业发展暨共链行动高峰论坛》">
+  <data key="d6">16.0</data>
+  <data key="d7">资本运营部协办了《网络安全现代产业发展暨共链行动高峰论坛》。&lt;SEP&gt;资本运营部是《网络安全现代产业发展暨共链行动高峰论坛》的主办单位。</data>
+  <data key="d8">co-hosting,organizational support,主办,协办</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="唐永博">
+  <data key="d6">14.0</data>
+  <data key="d7">唐永博作为集团公司副总经理，出席了《网络安全现代产业发展暨共链行动高峰论坛》。&lt;SEP&gt;唐永博是《网络安全现代产业发展暨共链行动高峰论坛》的邀请嘉宾之一，担任集团公司副总经理。</data>
+  <data key="d8">forum attendance,leadership,关联,嘉宾</data>
+  <data key="d9">chunk-20691d38db572dba246666057c00d44c&lt;SEP&gt;chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="国资委">
+  <data key="d6">8.0</data>
+  <data key="d7">国资委的领导出席了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">forum attendance,government involvement</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="工信部">
+  <data key="d6">8.0</data>
+  <data key="d7">工信部的领导出席了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">forum attendance,government involvement</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="工经联">
+  <data key="d6">7.0</data>
+  <data key="d7">工经联的领导出席了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">forum attendance,industry association involvement</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="行业协会">
+  <data key="d6">7.0</data>
+  <data key="d7">行业协会的代表出席了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">forum attendance,industry association involvement</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="院士专家">
+  <data key="d6">9.0</data>
+  <data key="d7">院士专家出席了《网络安全现代产业发展暨共链行动高峰论坛》，提供了专业支持。</data>
+  <data key="d8">expert involvement,forum attendance</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="网络与信息安全部">
+  <data key="d6">9.0</data>
+  <data key="d7">网络与信息安全部负责举办了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">event hosting,organizational responsibility</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《网络安全现代产业发展暨共链行动高峰论坛》" target="研究院">
+  <data key="d6">8.0</data>
+  <data key="d7">研究院协办了《网络安全现代产业发展暨共链行动高峰论坛》。</data>
+  <data key="d8">co-hosting,organizational support</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="唐永博" target="联通云AI焕新论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">唐永博出席了联通云AI焕新论坛，可能进行了分享或讨论。</data>
+  <data key="d8">forum attendance,leadership</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="唐永博" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">7.0</data>
+  <data key="d7">唐永博出席了《2025中国联通合作伙伴大会》，可能进行了分享或讨论。</data>
+  <data key="d8">forum attendance,leadership</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="616会议室" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">《2025中国联通合作伙伴大会》的部分分会场设在616会议室。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="616会议室" target="《联通云AI焕新论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《联通云AI焕新论坛》的会议地点是616会议室。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅AB" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">《2025中国联通合作伙伴大会》的部分分会场设在金厅AB。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅AB" target="《工业智能论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《工业智能论坛》的会议地点是金厅AB。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅AB" target="《数字消费论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《数字消费论坛》的会议地点是金厅AB。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">《2025中国联通合作伙伴大会》的部分分会场设在金厅。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅" target="《工业智能论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《工业智能论坛》的会议地点是金厅。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅" target="《数字消费论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《数字消费论坛》的会议地点是金厅。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅" target="《合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">《合作伙伴大会》的会议地点是金厅。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅C" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">《2025中国联通合作伙伴大会》的部分分会场设在金厅C。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅C" target="《工业智能论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《工业智能论坛》的会议地点是金厅C。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅C" target="《数字消费论坛》">
+  <data key="d6">8.0</data>
+  <data key="d7">《数字消费论坛》的会议地点是金厅C。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="金厅C" target="《合作伙伴大会》">
+  <data key="d6">8.0</data>
+  <data key="d7">《合作伙伴大会》的会议地点是金厅C。</data>
+  <data key="d8">meeting location,venue</data>
+  <data key="d9">chunk-5527a531fccb0fac8b7323d3ae2b8bea</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="联通云AI焕新论坛-开场致辞" target="中国联合网络通信集团有限公司">
+  <data key="d6">8.0</data>
+  <data key="d7">联通云AI焕新论坛-开场致辞的邀请嘉宾是是中国联通集团公司领导。</data>
+  <data key="d8">company leadership,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会" target="数字消费论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">合作伙伴大会包含数字消费论坛这一重要环节，促进合作伙伴在数字消费领域的合作。</data>
+  <data key="d8">专题讨论,合作交流</data>
+  <data key="d9">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会" target="工业智能论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">工业智能论坛和合作伙伴大会都涉及多方合作，但侧重点不同，前者侧重于工业领域，后者侧重于广泛的合作领域。</data>
+  <data key="d8">合作交流,技术创新</data>
+  <data key="d9">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数字消费论坛" target="数智医疗论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">数字消费论坛和数智医疗论坛都涉及智能化技术的应用，但侧重点不同，前者侧重于消费领域，后者侧重于医疗领域。</data>
+  <data key="d8">技术共享,智能化应用</data>
+  <data key="d9">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智医疗论坛" target="网安共链论坛">
+  <data key="d6">6.0</data>
+  <data key="d7">数智医疗论坛和网安共链论坛都涉及技术的安全和隐私保护问题，但侧重点不同，前者侧重于医疗领域，后者侧重于网络安全和区块链。</data>
+  <data key="d8">技术安全,隐私保护</data>
+  <data key="d9">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="网安共链论坛" target="联通云AI焕新论坛">
+  <data key="d6">7.0</data>
+  <data key="d7">网安共链论坛和联通云AI焕新论坛都涉及云计算和人工智能技术的应用，但侧重点不同，前者侧重于网络安全和区块链，后者侧重于云计算和AI。</data>
+  <data key="d8">安全保障,技术应用</data>
+  <data key="d9">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="联通云AI焕新论坛" target="工业智能论坛">
+  <data key="d6">8.0</data>
+  <data key="d7">联通云AI焕新论坛和工业智能论坛都涉及AI技术的应用，但侧重点不同，前者侧重于云计算，后者侧重于工业领域。</data>
+  <data key="d8">AI应用,技术创新</data>
+  <data key="d9">chunk-8ad9f1aa716c8182e6d7b86fdbe7e0a8</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会-向实同行共创融合新生态" target="合作伙伴大会-嘉宾致辞">
+  <data key="d6">7.0</data>
+  <data key="d7">合作伙伴大会-向实同行共创融合新生态和合作伙伴大会-嘉宾致辞之间存在关联，因为后者是前者的一部分。</data>
+  <data key="d8">conference,guest speech</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会-嘉宾致辞" target="陈忠岳(中国联合网络通信集团有限公司董事长)">
+  <data key="d6">8.0</data>
+  <data key="d7">合作伙伴大会-嘉宾致辞的邀请嘉宾是陈忠岳(中国联合网络通信集团有限公司董事长)。</data>
+  <data key="d8">chairman,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会-让人工智能为医学创新插上翅膀" target="宁光(中国工程院院士、上海瑞金医院院长)">
+  <data key="d6">8.0</data>
+  <data key="d7">合作伙伴大会-让人工智能为医学创新插上翅膀的邀请嘉宾是宁光(中国工程院院士、上海瑞金医院院长)。</data>
+  <data key="d8">academician,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎" target="人工智能领域专家">
+  <data key="d6">8.0</data>
+  <data key="d7">合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎的邀请嘉宾是人工智能领域专家。</data>
+  <data key="d8">expert,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠" target="杨超斌(华为)">
+  <data key="d6">8.0</data>
+  <data key="d7">合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠的邀请嘉宾是杨超斌(华为)。</data>
+  <data key="d8">Huawei,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智医疗论坛-中国联通医疗健康+人工智能能力体系及探索实践" target="中国联合网络通信集团有限公司">
+  <data key="d6">8.0</data>
+  <data key="d7">数智医疗论坛-中国联通医疗健康+人工智能能力体系及探索实践的邀请嘉宾是是中国联合网络通信集团有限公司领导。</data>
+  <data key="d8">company leadership,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="数智医疗论坛-中国联通医疗成果发布" target="中国联合网络通信集团有限公司">
+  <data key="d6">8.0</data>
+  <data key="d7">数智医疗论坛-中国联通医疗成果发布的邀请嘉宾是是中国联合网络通信集团有限公司领导。</data>
+  <data key="d8">company leadership,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="网安共链论坛-成果发布" target="中国联合网络通信集团有限公司">
+  <data key="d6">8.0</data>
+  <data key="d7">网安共链论坛-成果发布的邀请嘉宾是是中国联合网络通信集团有限公司领导。</data>
+  <data key="d8">company leadership,speech invitation</data>
+  <data key="d9">chunk-2e177c2c7b3ba1fb377388a387a1b8ee</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="中国联合网络通信集团有限公司" target="王利民">
+  <data key="d6">7.0</data>
+  <data key="d7">王利民是中国联合网络通信集团有限公司的副总经理。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="中国联合网络通信集团有限公司" target="梁守峰">
+  <data key="d6">7.0</data>
+  <data key="d7">梁守峰是中国联合网络通信集团有限公司的副总经理。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="上海瑞金医院" target="宁光">
+  <data key="d6">7.0</data>
+  <data key="d7">宁光是上海瑞金医院的院长。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="宁光" target="《合作伙伴大会-AI驱动科技人才创新，为新质生产力提供核心引擎》">
+  <data key="d6">8.0</data>
+  <data key="d7">宁光作为人工智能领域专家受邀参加该大会。</data>
+  <data key="d8">expertise,invitation</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="杨超斌" target="《合作伙伴大会-5G-A*AI双轮驱动，共筑数智新生活，加速全社会智能普惠》">
+  <data key="d6">8.0</data>
+  <data key="d7">杨超斌作为华为ICT BG总裁受邀参加该大会。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="杨超斌" target="华为ICT BG">
+  <data key="d6">7.0</data>
+  <data key="d7">杨超斌是华为ICT BG的总裁。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="徐子阳" target="《合作伙伴大会-云网数智融合进阶，共启创新发展新范式》">
+  <data key="d6">8.0</data>
+  <data key="d7">徐子阳作为中兴通讯股份有限公司的高层受邀参加该大会。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="徐子阳" target="中兴通讯股份有限公司">
+  <data key="d6">7.0</data>
+  <data key="d7">徐子阳是中兴通讯股份有限公司的高层。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="王利民" target="《数字消费论坛-融合开放，共建数字消费新生态》">
+  <data key="d6">8.0</data>
+  <data key="d7">王利民作为中国联合网络通信集团有限公司的副总经理受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="贾志强" target="《数字消费论坛-产品同行篇：主题演讲及产品发布》">
+  <data key="d6">8.0</data>
+  <data key="d7">贾志强作为中国联通市场部(品牌发展部)的总经理受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="贾志强" target="中国联通市场部(品牌发展部)">
+  <data key="d6">7.0</data>
+  <data key="d7">贾志强是中国联合网络通信集团有限公司市场部(品牌发展部)的总经理。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="王启明" target="《数字消费论坛-终端同行篇：思享荟及情景展示》">
+  <data key="d6">8.0</data>
+  <data key="d7">王启明作为中国联通华盛公司的董事长受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="王启明" target="中国联通华盛公司">
+  <data key="d6">7.0</data>
+  <data key="d7">王启明是中国联合网络通信集团有限公司华盛公司的董事长。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="胡乐信" target="《数字消费论坛-渠道同行篇：主题演讲、渠道签约仪式及颁奖仪式》">
+  <data key="d6">8.0</data>
+  <data key="d7">胡乐信作为中国联通公众客户事业部的总经理受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="胡乐信" target="中国联通公众客户事业部">
+  <data key="d6">7.0</data>
+  <data key="d7">胡乐信是中国联合网络通信集团有限公司公众客户事业部的总经理。</data>
+  <data key="d8">affiliation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="方滨兴" target="《网安共链论坛-院士演讲》">
+  <data key="d6">8.0</data>
+  <data key="d7">方滨兴作为中国工程院院士受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="梁守峰" target="《网安共链论坛-主旨演讲》">
+  <data key="d6">8.0</data>
+  <data key="d7">梁守峰作为中国联合网络通信集团有限公司的副总经理受邀参加该论坛。</data>
+  <data key="d8">invitation,leadership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="中国联通及产业链合作伙伴" target="《网安共链论坛-供需对接清单发布暨合作项目签约》">
+  <data key="d6">8.0</data>
+  <data key="d7">中国联通及其产业链合作伙伴共同参与了该论坛。</data>
+  <data key="d8">collaboration,partnership</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="上海世博中心" target="《2025中国联通合作伙伴大会》">
+  <data key="d6">9.0</data>
+  <data key="d7">上海世博中心是《2025中国联通合作伙伴大会》的举办地点。</data>
+  <data key="d8">event,location</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+<edge source="《2025中国联通合作伙伴大会》" target="2025年7月18日至2025年7月19日">
+  <data key="d6">9.0</data>
+  <data key="d7">《2025中国联通合作伙伴大会》将在2025年7月18日至19日举行。</data>
+  <data key="d8">date,event</data>
+  <data key="d9">chunk-77c783d9c1e5a3f6976bb7021a032814</data>
+  <data key="d10">graph_data.txt</data>
+  <data key="d11">1752142754</data>
+</edge>
+</graph></graphml>

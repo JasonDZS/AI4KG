@@ -1,0 +1,28 @@
+{
+  "api_url": "http://localhost:8000",
+  "default_user": "admin",
+  "batch_size": 1000,
+  "auto_detect_type": true,
+  "attribute_mapping": {
+    "node_size": "size",
+    "node_color": "color", 
+    "edge_weight": "weight",
+    "pos": ["x", "y"],
+    "position": ["x", "y"],
+    "category": "type",
+    "class": "type",
+    "group": "type",
+    "relation": "type",
+    "relationship": "type"
+  },
+  "default_node_type": "entity",
+  "default_edge_type": "relationship",
+  "supported_formats": ["gml", "graphml", "gexf", "json"],
+  "max_file_size_mb": 100,
+  "logging": {
+    "level": "INFO",
+    "file": "logs/import.log",
+    "max_size_mb": 10,
+    "backup_count": 5
+  }
+}
