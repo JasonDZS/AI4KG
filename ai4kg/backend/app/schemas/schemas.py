@@ -45,7 +45,7 @@ class NodeBase(BaseModel):
     color: Optional[str] = None
 
 class NodeCreate(NodeBase):
-    pass
+    id: Optional[str] = None
 
 class NodeUpdate(BaseModel):
     label: Optional[str] = None
@@ -64,8 +64,8 @@ class Node(NodeBase):
 
 # 边模型
 class EdgeBase(BaseModel):
-    source_node_id: str
-    target_node_id: str
+    source: str
+    target: str
     label: Optional[str] = None
     type: str
     properties: Optional[Dict[str, Any]] = {}
@@ -76,8 +76,8 @@ class EdgeCreate(EdgeBase):
     pass
 
 class EdgeUpdate(BaseModel):
-    source_node_id: Optional[str] = None
-    target_node_id: Optional[str] = None
+    source: Optional[str] = None
+    target: Optional[str] = None
     label: Optional[str] = None
     type: Optional[str] = None
     properties: Optional[Dict[str, Any]] = None
@@ -102,8 +102,8 @@ class GraphCreate(GraphBase):
 class GraphUpdate(BaseModel):
     title: Optional[str] = None
     description: Optional[str] = None
-    nodes: Optional[List[Node]] = None
-    edges: Optional[List[Edge]] = None
+    nodes: Optional[List[dict]] = None
+    edges: Optional[List[dict]] = None
 
 class GraphMetadata(BaseModel):
     created_at: datetime

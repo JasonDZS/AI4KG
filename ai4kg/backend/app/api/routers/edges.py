@@ -6,6 +6,7 @@ import uuid
 from app.core.database import get_db
 from app.api.routers.auth import get_current_user
 from app.schemas.schemas import EdgeCreate, EdgeUpdate, DataResponse, User
+from app.services.graph_service import GraphService
 
 router = APIRouter()
 
@@ -27,8 +28,84 @@ async def create_edge(
     db: Session = Depends(get_db)
 ):
     """创建边"""
-    # TODO: 实现边创建逻辑
-    return DataResponse(success=True, message="边创建功能待实现", data=None)
+    try:
+        graph_service = GraphService(db)
+        
+        # 验证图谱是否存在且属于当前用户
+        graph = graph_service.get_graph_by_id(str(graph_id), current_user)
+        if not graph:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="图谱不存在"
+            )
+        
+        # 获取当前图谱数据
+        current_graph_data = graph_service.get_graph_with_data(str(graph_id), current_user)
+        
+        # 验证源节点和目标节点是否存在
+        nodes = current_graph_data.get("nodes", [])
+        source_exists = any(n["id"] == edge_data.source for n in nodes)
+        target_exists = any(n["id"] == edge_data.target for n in nodes)
+        
+        if not source_exists:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"源节点 '{edge_data.source}' 不存在"
+            )
+        
+        if not target_exists:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail=f"目标节点 '{edge_data.target}' 不存在"
+            )
+        
+        # 生成新边ID
+        new_edge_id = str(uuid.uuid4())
+        
+        # 检查是否已存在相同的边
+        existing_edge = next((e for e in current_graph_data.get("edges", []) 
+                            if e["source"] == edge_data.source and e["target"] == edge_data.target), None)
+        
+        # 创建新边数据
+        new_edge = {
+            "id": new_edge_id,
+            "source": edge_data.source,
+            "target": edge_data.target,
+            "label": edge_data.label or "",
+            "type": edge_data.type,
+            "weight": edge_data.weight,
+            "color": edge_data.color,
+            "properties": edge_data.properties or {}
+        }
+        
+        # 添加到现有数据中
+        updated_nodes = current_graph_data.get("nodes", [])
+        updated_edges = current_graph_data.get("edges", []) + [new_edge]
+        
+        # 更新图谱数据
+        from app.schemas.schemas import GraphUpdate
+        update_data = GraphUpdate(
+            title=graph.title,
+            description=graph.description,
+            nodes=updated_nodes,
+            edges=updated_edges
+        )
+        
+        graph_service.update_graph(str(graph_id), update_data, current_user)
+        
+        return DataResponse(
+            success=True,
+            message="边创建成功",
+            data=new_edge
+        )
+        
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"创建边失败: {str(e)}"
+        )
 
 @router.put("/{graph_id}/edges/{edge_id}", response_model=DataResponse)
 async def update_edge(

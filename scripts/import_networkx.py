@@ -2,13 +2,18 @@
 """
 AI4KG NetworkX 图数据导入脚本
 
-将 NetworkX 格式的图数据导入到 AI4KG 数据库中。
+将 NetworkX 格式的图数据导入到 AI4KG 后端数据库中。
 支持 GML, GraphML, GEXF, JSON 等格式。
+
+数据格式说明：
+- 节点格式：适配后端 Node 模型，包含 id(业务ID), label, type, properties, x, y, size, color
+- 边格式：适配后端 Edge 模型，包含 id(业务ID), source_node_id, target_node_id, label, type, properties, weight, color
+- 后端存储：双重存储系统 (SQLite + Neo4j)，主要使用 SQLite 存储
 
 Usage:
     python import_networkx.py --file graph.gml --title "我的图谱"
-    python import_networkx.py --directory ./graphs --user admin
-    python import_networkx.py --file graph.gml --analyze --layout spring
+    python import_networkx.py --directory ./graphs --user testuser
+    python import_networkx.py --file graph.gml --analyze --layout spring --dry-run
 """
 
 import argparse
@@ -151,7 +156,7 @@ class NetworkXImporter:
             else:
                 normalized_degree = 0.5
             size = size_range[0] + normalized_degree * (size_range[1] - size_range[0])
-            attrs['size'] = round(size, 2)
+            attrs['size'] = round(size / 3, 2)
             
             # 设置颜色（基于类型）
             node_type = node_types.get(node_id, 'default')
@@ -239,20 +244,20 @@ class NetworkXImporter:
         return stats
     
     def convert_graph_to_ai4kg(self, G: nx.Graph, title: str, description: str = "") -> Dict[str, Any]:
-        """将NetworkX图转换为AI4KG格式"""
+        """将NetworkX图转换为AI4KG后端格式"""
         logger.info(f"转换图数据: {len(G.nodes)} 节点, {len(G.edges)} 边")
         
-        # 转换节点
+        # 转换节点 - 适配后端Node模型
         nodes = []
         for node_id, attrs in G.nodes(data=True):
             node = {
-                "id": str(node_id),
+                "id": str(node_id),  # 业务ID，对应backend的node_id字段
                 "label": attrs.get('label', str(node_id)),
                 "type": self._infer_node_type(attrs),
                 "properties": self._clean_attributes(attrs, exclude=['label', 'type', 'x', 'y', 'size', 'color'])
             }
             
-            # 处理坐标
+            # 处理坐标 - 后端直接存储为x, y字段
             if 'pos' in attrs and isinstance(attrs['pos'], (list, tuple)) and len(attrs['pos']) >= 2:
                 try:
                     node['x'] = float(attrs['pos'][0])
@@ -275,37 +280,70 @@ class NetworkXImporter:
                 except (ValueError, TypeError):
                     node['y'] = None
             
-            # 处理大小和颜色
-            node['size'] = attrs.get('size', attrs.get('node_size'))
-            node['color'] = attrs.get('color', attrs.get('node_color'))
+            # 处理大小和颜色 - 后端直接存储为size, color字段
+            size_val = attrs.get('size', attrs.get('node_size'))
+            if size_val is not None:
+                try:
+                    node['size'] = float(size_val)
+                except (ValueError, TypeError):
+                    node['size'] = None
+            else:
+                node['size'] = None
+                
+            color_val = attrs.get('color', attrs.get('node_color'))
+            if color_val is not None:
+                node['color'] = str(color_val)
+            else:
+                node['color'] = None
             
-            # 清理None值，但保留坐标字段
+            # 清理None值，但保留坐标字段（后端期望这些字段）
             cleaned_node = {}
             for k, v in node.items():
-                if k in ['x', 'y']:  # 坐标字段保留，即使是None
+                if k in ['x', 'y', 'size', 'color']:  # 这些字段保留，即使是None
                     cleaned_node[k] = v
                 elif v is not None:  # 其他字段只在非None时保留
                     cleaned_node[k] = v
             
             nodes.append(cleaned_node)
         
-        # 转换边
+        # 转换边 - 适配后端Edge模型
         edges = []
         for source, target, attrs in G.edges(data=True):
             edge = {
-                "id": attrs.get('id', f"{source}-{target}"),
-                "source": str(source),
-                "target": str(target),
+                "id": attrs.get('id', f"{source}-{target}"),  # 业务ID，对应backend的edge_id字段
+                "source_node_id": str(source),  # 后端使用source_node_id
+                "target_node_id": str(target),  # 后端使用target_node_id
                 "label": attrs.get('label', attrs.get('relation', '')),
                 "type": attrs.get('type', attrs.get('relation', 'relationship')),
-                "properties": self._clean_attributes(attrs, exclude=['label', 'type', 'weight', 'color']),
-                "weight": attrs.get('weight', attrs.get('strength')),
-                "color": attrs.get('color', attrs.get('edge_color'))
+                "properties": self._clean_attributes(attrs, exclude=['label', 'type', 'weight', 'color'])
             }
             
-            # 清理None值
-            edge = {k: v for k, v in edge.items() if v is not None}
-            edges.append(edge)
+            # 处理权重 - 后端直接存储为weight字段
+            weight_val = attrs.get('weight', attrs.get('strength'))
+            if weight_val is not None:
+                try:
+                    edge['weight'] = float(weight_val)
+                except (ValueError, TypeError):
+                    edge['weight'] = None
+            else:
+                edge['weight'] = None
+            
+            # 处理颜色 - 后端直接存储为color字段
+            color_val = attrs.get('color', attrs.get('edge_color'))
+            if color_val is not None:
+                edge['color'] = str(color_val)
+            else:
+                edge['color'] = None
+            
+            # 清理None值，但保留权重和颜色字段
+            cleaned_edge = {}
+            for k, v in edge.items():
+                if k in ['weight', 'color']:  # 这些字段保留，即使是None
+                    cleaned_edge[k] = v
+                elif v is not None:  # 其他字段只在非None时保留
+                    cleaned_edge[k] = v
+            
+            edges.append(cleaned_edge)
         
         # 添加图的统计信息到描述中
         if hasattr(G, 'graph') and G.graph:
@@ -386,12 +424,22 @@ class NetworkXImporter:
             result = response.json()
             if result.get('success'):
                 logger.info(f"导入成功，图谱ID: {result['data']['id']}")
+                # 返回完整的图谱数据，包含后端生成的节点和边信息
                 return result['data']
             else:
                 raise Exception(f"API返回错误: {result.get('message', '未知错误')}")
                 
         except requests.exceptions.RequestException as e:
             logger.error(f"API请求失败: {e}")
+            # 提供更详细的错误信息
+            if hasattr(e, 'response') and e.response is not None:
+                try:
+                    error_detail = e.response.json()
+                    if 'detail' in error_detail:
+                        logger.error(f"API错误详情: {error_detail['detail']}")
+                except:
+                    logger.error(f"HTTP状态码: {e.response.status_code}")
+                    logger.error(f"响应内容: {e.response.text}")
             raise
     
     def authenticate(self, username: str, password: str) -> str:
@@ -463,6 +511,9 @@ class NetworkXImporter:
                 results.append({
                     "file": str(file_path),
                     "graph_id": result.get('id'),
+                    "title": result.get('title', title),
+                    "node_count": len(result.get('nodes', [])),
+                    "edge_count": len(result.get('edges', [])),
                     "status": "success"
                 })
                 
@@ -558,6 +609,7 @@ def main():
             graph_data = importer.convert_graph_to_ai4kg(G, args.title, description)
             
             if args.dry_run:
+                # 预览模式，显示转换后的数据结构
                 preview_data = {
                     "title": graph_data["title"],
                     "description": graph_data["description"],
@@ -569,6 +621,13 @@ def main():
                     "sample_edges": graph_data["edges"][:3]
                 }
                 
+                # 显示格式说明
+                preview_data["format_info"] = {
+                    "backend_format": "AI4KG Backend Compatible",
+                    "node_fields": ["id", "label", "type", "properties", "x", "y", "size", "color"],
+                    "edge_fields": ["id", "source_node_id", "target_node_id", "label", "type", "properties", "weight", "color"]
+                }
+                
                 if args.analyze and graph_data["nodes"]:
                     # 显示分析结果统计
                     node_types = {}
@@ -576,7 +635,7 @@ def main():
                     for node in graph_data["nodes"]:
                         node_type = node.get('type', 'unknown')
                         node_types[node_type] = node_types.get(node_type, 0) + 1
-                        if 'size' in node:
+                        if 'size' in node and node['size'] is not None:
                             sizes.append(node['size'])
                     
                     preview_data["analysis_stats"] = {
