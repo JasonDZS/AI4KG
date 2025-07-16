@@ -1,44 +1,26 @@
 import { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { useQuery } from '@tanstack/react-query'
+import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { graphsApi } from '@/services/api'
 import GraphCanvas from '@/components/Graph/GraphCanvas'
 import NodePropertiesPanel from '@/components/Graph/NodePropertiesPanel'
 import EdgePropertiesPanel from '@/components/Graph/EdgePropertiesPanel'
 import GraphToolbar from '@/components/Graph/GraphToolbar'
-import ContextMenu from '@/components/Graph/ContextMenu'
 import type { GraphNode, GraphEdge } from '@/types'
-
-interface ContextMenuState {
-  show: boolean
-  x: number
-  y: number
-  type: 'node' | 'edge' | 'canvas'
-  target?: GraphNode | GraphEdge
-}
 
 const GraphViewPage = () => {
   const { graphId } = useParams<{ graphId: string }>()
+  const queryClient = useQueryClient()
   const [selectedNodes, setSelectedNodes] = useState<string[]>([])
   const [selectedEdges, setSelectedEdges] = useState<string[]>([])
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null)
   const [selectedEdge, setSelectedEdge] = useState<GraphEdge | null>(null)
-  const [contextMenu, setContextMenu] = useState<ContextMenuState>({
-    show: false,
-    x: 0,
-    y: 0,
-    type: 'canvas',
-  })
 
   const { data: graphData, isLoading, error } = useQuery({
     queryKey: ['graph', graphId],
     queryFn: () => graphsApi.getGraph(graphId!),
     enabled: !!graphId,
   })
-
-  const hideContextMenu = () => {
-    setContextMenu(prev => ({ ...prev, show: false }))
-  }
 
   const handleNodeSelect = (nodeId: string) => {
     const node = nodes.find(n => n.id === nodeId)
@@ -59,7 +41,6 @@ const GraphViewPage = () => {
     setSelectedEdge(null)
     setSelectedNodes([node.id])
     setSelectedEdges([])
-    hideContextMenu()
   }
 
   const handleEdgeClick = (edge: GraphEdge) => {
@@ -68,26 +49,6 @@ const GraphViewPage = () => {
     setSelectedNode(null)
     setSelectedEdges([edge.id])
     setSelectedNodes([])
-    hideContextMenu()
-  }
-
-  const handleNodeRightClick = (node: GraphNode, event: MouseEvent) => {
-    setContextMenu({
-      show: true,
-      x: event.clientX,
-      y: event.clientY,
-      type: 'node',
-      target: node,
-    })
-  }
-
-  const handleCanvasRightClick = (event: MouseEvent) => {
-    setContextMenu({
-      show: true,
-      x: event.clientX,
-      y: event.clientY,
-      type: 'canvas',
-    })
   }
 
   if (isLoading) {
@@ -135,8 +96,6 @@ const GraphViewPage = () => {
             edges={edges}
             onNodeClick={handleNodeClick}
             onEdgeClick={handleEdgeClick}
-            onNodeRightClick={handleNodeRightClick}
-            onCanvasRightClick={handleCanvasRightClick}
             selectedNodes={selectedNodes}
             selectedEdges={selectedEdges}
           />
@@ -146,7 +105,42 @@ const GraphViewPage = () => {
           {selectedNode && (
             <NodePropertiesPanel
               node={selectedNode}
+              graphId={graphId!}
               onClose={() => setSelectedNode(null)}
+              onNodeUpdate={(updatedNode) => {
+                setSelectedNode(updatedNode)
+                // 更新React Query缓存中的节点数据
+                queryClient.setQueryData(['graph', graphId], (oldData: any) => {
+                  if (!oldData?.data) return oldData
+                  
+                  return {
+                    ...oldData,
+                    data: {
+                      ...oldData.data,
+                      nodes: oldData.data.nodes.map((node: GraphNode) =>
+                        node.id === updatedNode.id ? updatedNode : node
+                      )
+                    }
+                  }
+                })
+              }}
+              onNodeDelete={(nodeId) => {
+                // 从React Query缓存中删除节点
+                queryClient.setQueryData(['graph', graphId], (oldData: any) => {
+                  if (!oldData?.data) return oldData
+                  
+                  return {
+                    ...oldData,
+                    data: {
+                      ...oldData.data,
+                      nodes: oldData.data.nodes.filter((node: GraphNode) => node.id !== nodeId),
+                      edges: oldData.data.edges.filter((edge: GraphEdge) => 
+                        edge.source !== nodeId && edge.target !== nodeId
+                      )
+                    }
+                  }
+                })
+              }}
             />
           )}
           {selectedEdge && (
@@ -157,22 +151,25 @@ const GraphViewPage = () => {
           )}
           {!selectedNode && !selectedEdge && (
             <div className="p-4 text-center text-muted-foreground">
-              点击节点或边查看属性
+              <div>点击节点或边查看属性</div>
+              {nodes?.length > 0 && (
+                <div className="mt-4 space-y-2">
+                  <p className="text-xs">调试工具：</p>
+                  <button 
+                    onClick={() => handleNodeClick(nodes[0])}
+                    className="block w-full px-3 py-2 bg-blue-100 text-blue-800 rounded text-sm hover:bg-blue-200"
+                  >
+                    选择节点: {nodes[0]?.label || nodes[0]?.id}
+                  </button>
+                  <div className="text-xs text-gray-500">
+                    图谱包含 {nodes.length} 个节点
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>
       </div>
-
-      {contextMenu.show && (
-        <ContextMenu
-          x={contextMenu.x}
-          y={contextMenu.y}
-          type={contextMenu.type}
-          target={contextMenu.target}
-          onClose={hideContextMenu}
-          graphId={graphId!}
-        />
-      )}
     </div>
   )
 }

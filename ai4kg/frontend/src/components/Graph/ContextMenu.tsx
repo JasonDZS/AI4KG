@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
-import { Button } from '@/components/ui/Button'
-import { Plus, Edit, Trash2, Copy } from 'lucide-react'
+import { Edit, Trash2 } from 'lucide-react'
+import { edgesApi } from '@/services/api'
 import type { GraphNode, GraphEdge } from '@/types'
 
 interface ContextMenuProps {
@@ -10,6 +10,8 @@ interface ContextMenuProps {
   target?: GraphNode | GraphEdge
   onClose: () => void
   graphId: string
+  onEdgeUpdate?: (edge: GraphEdge) => void
+  onEdgeDelete?: (edgeId: string) => void
 }
 
 const ContextMenu: React.FC<ContextMenuProps> = ({
@@ -19,6 +21,8 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
   target,
   onClose,
   graphId,
+  onEdgeUpdate: _onEdgeUpdate,
+  onEdgeDelete,
 }) => {
   useEffect(() => {
     const handleClickOutside = () => onClose()
@@ -35,119 +39,71 @@ const ContextMenu: React.FC<ContextMenuProps> = ({
     }
   }, [onClose])
 
-  const handleAddNode = () => {
-    // TODO: 实现添加节点功能
-    console.log('Add node at position')
-    onClose()
-  }
-
-  const handleEditNode = () => {
-    // TODO: 实现编辑节点功能
-    console.log('Edit node:', target)
-    onClose()
-  }
-
-  const handleDeleteNode = () => {
-    // TODO: 实现删除节点功能
-    if (confirm('确定要删除这个节点吗？')) {
-      console.log('Delete node:', target)
+  const handleEditEdge = () => {
+    if (target && 'source' in target) {
+      // TODO: 实现边编辑对话框
+      console.log('Edit edge:', target)
+      alert('边编辑功能待实现')
     }
     onClose()
   }
 
-  const handleCopyNode = () => {
-    // TODO: 实现复制节点功能
-    console.log('Copy node:', target)
-    onClose()
-  }
-
-  const handleEditEdge = () => {
-    // TODO: 实现编辑边功能
-    console.log('Edit edge:', target)
-    onClose()
-  }
-
-  const handleDeleteEdge = () => {
-    // TODO: 实现删除边功能
-    if (confirm('确定要删除这条边吗？')) {
-      console.log('Delete edge:', target)
+  const handleDeleteEdge = async () => {
+    if (!target || !('source' in target)) return
+    
+    if (confirm('确定要删除这条边吗？删除后无法恢复。')) {
+      try {
+        await edgesApi.deleteEdge(graphId, target.id)
+        onEdgeDelete?.(target.id)
+        console.log('Edge deleted successfully')
+      } catch (error) {
+        console.error('Failed to delete edge:', error)
+        alert('删除边失败，请稍后重试')
+      }
     }
     onClose()
   }
 
   const renderNodeMenu = () => (
-    <>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="w-full justify-start"
-        onClick={handleEditNode}
-      >
-        <Edit className="h-4 w-4 mr-2" />
-        编辑节点
-      </Button>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="w-full justify-start"
-        onClick={handleCopyNode}
-      >
-        <Copy className="h-4 w-4 mr-2" />
-        复制节点
-      </Button>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="w-full justify-start text-destructive hover:text-destructive"
-        onClick={handleDeleteNode}
-      >
-        <Trash2 className="h-4 w-4 mr-2" />
-        删除节点
-      </Button>
-    </>
+    <div className="space-y-1">
+      <div className="px-3 py-2 text-sm text-gray-500">
+        节点操作已禁用
+      </div>
+    </div>
   )
 
   const renderEdgeMenu = () => (
-    <>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="w-full justify-start"
+    <div className="space-y-1">
+      <button
+        className="w-full flex items-center px-3 py-2 text-sm text-gray-700 hover:bg-gray-100 rounded"
         onClick={handleEditEdge}
       >
         <Edit className="h-4 w-4 mr-2" />
         编辑边
-      </Button>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="w-full justify-start text-destructive hover:text-destructive"
+      </button>
+      <button
+        className="w-full flex items-center px-3 py-2 text-sm text-red-600 hover:bg-red-50 rounded"
         onClick={handleDeleteEdge}
       >
         <Trash2 className="h-4 w-4 mr-2" />
         删除边
-      </Button>
-    </>
+      </button>
+    </div>
   )
 
   const renderCanvasMenu = () => (
-    <>
-      <Button
-        variant="ghost"
-        size="sm"
-        className="w-full justify-start"
-        onClick={handleAddNode}
-      >
-        <Plus className="h-4 w-4 mr-2" />
-        添加节点
-      </Button>
-    </>
+    <div className="space-y-1">
+      <div className="px-3 py-2 text-sm text-gray-500">
+        画布操作已禁用
+      </div>
+    </div>
   )
 
   return (
     <div
-      className="fixed z-50 min-w-[150px] bg-white border border-gray-200 rounded-md shadow-lg py-1"
+      className="fixed z-50 min-w-[150px] bg-white border border-gray-200 rounded-md shadow-lg py-2"
       style={{ left: x, top: y }}
+      onClick={(e) => e.stopPropagation()}
     >
       {type === 'node' && renderNodeMenu()}
       {type === 'edge' && renderEdgeMenu()}

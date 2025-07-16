@@ -10,8 +10,6 @@ interface GraphCanvasProps {
   edges: GraphEdge[]
   onNodeClick?: (node: GraphNode) => void
   onEdgeClick?: (edge: GraphEdge) => void
-  onNodeRightClick?: (node: GraphNode, event: MouseEvent) => void
-  onCanvasRightClick?: (event: MouseEvent) => void
   selectedNodes?: string[]
   selectedEdges?: string[]
   onSelectionChange?: (selectedNodes: string[], selectedEdges: string[]) => void
@@ -22,11 +20,8 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
   edges,
   onNodeClick,
   onEdgeClick,
-  onNodeRightClick,
-  onCanvasRightClick,
   selectedNodes = [],
   selectedEdges = [],
-  onSelectionChange,
 }) => {
   const containerRef = useRef<HTMLDivElement>(null)
   const sigmaRef = useRef<Sigma | null>(null)
@@ -62,29 +57,12 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
       }
     })
 
-    sigma.on('rightClickNode', ({ node, event }) => {
-      event.preventSigmaDefault()
-      event.original.preventDefault()
-      const nodeData = nodes.find(n => n.id === node)
-      if (nodeData && onNodeRightClick) {
-        onNodeRightClick(nodeData, event.original as MouseEvent)
-      }
-    })
-
     sigma.on('clickEdge', ({ edge }) => {
       // Find edge by the stored edge ID in attributes
       const edgeAttrs = graph.getEdgeAttributes(edge)
       const edgeData = edges.find(e => e.id === edgeAttrs.id)
       if (edgeData && onEdgeClick) {
         onEdgeClick(edgeData)
-      }
-    })
-
-    sigma.on('rightClickStage', ({ event }) => {
-      event.preventSigmaDefault()
-      event.original.preventDefault()
-      if (onCanvasRightClick) {
-        onCanvasRightClick(event.original as MouseEvent)
       }
     })
 
@@ -101,24 +79,13 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
     
     // Remove all existing listeners
     sigma.removeAllListeners('clickNode')
-    sigma.removeAllListeners('rightClickNode') 
     sigma.removeAllListeners('clickEdge')
-    sigma.removeAllListeners('rightClickStage')
     
     // Add updated listeners
     sigma.on('clickNode', ({ node }) => {
       const nodeData = nodes.find(n => n.id === node)
       if (nodeData && onNodeClick) {
         onNodeClick(nodeData)
-      }
-    })
-
-    sigma.on('rightClickNode', ({ node, event }) => {
-      event.preventSigmaDefault()
-      event.original.preventDefault()
-      const nodeData = nodes.find(n => n.id === node)
-      if (nodeData && onNodeRightClick) {
-        onNodeRightClick(nodeData, event.original as MouseEvent)
       }
     })
 
@@ -137,15 +104,7 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
         console.log('Edge data not found or onEdgeClick not provided')
       }
     })
-
-    sigma.on('rightClickStage', ({ event }) => {
-      event.preventSigmaDefault()
-      event.original.preventDefault()
-      if (onCanvasRightClick) {
-        onCanvasRightClick(event.original as MouseEvent)
-      }
-    })
-  }, [nodes, edges, onNodeClick, onEdgeClick, onNodeRightClick, onCanvasRightClick])
+  }, [nodes, edges, onNodeClick, onEdgeClick])
 
   useEffect(() => {
     if (!graphRef.current || !sigmaRef.current) return

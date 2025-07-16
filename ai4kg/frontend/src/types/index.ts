@@ -110,3 +110,11 @@ export interface GraphsListResponse {
   graphs: Graph[]
   total: number
 }
+
+export interface NodeDeleteImpact {
+  target_node: GraphNode
+  affected_edges: GraphEdge[]
+  connected_nodes: GraphNode[]
+  affected_edges_count: number
+  connected_nodes_count: number
+}

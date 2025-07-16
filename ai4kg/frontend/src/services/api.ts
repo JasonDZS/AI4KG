@@ -12,7 +12,8 @@ import type {
   CreateNodeRequest,
   CreateEdgeRequest,
   GraphNode,
-  GraphEdge
+  GraphEdge,
+  NodeDeleteImpact
 } from '@/types'
 
 const api = axios.create({
@@ -117,6 +118,12 @@ export const nodesApi = {
   // Update node
   updateNode: async (graphId: string, nodeId: string, data: Partial<CreateNodeRequest>): Promise<ApiResponse<GraphNode>> => {
     const response = await api.put(`/graphs/${graphId}/nodes/${nodeId}`, data)
+    return response.data
+  },
+
+  // Get node delete impact analysis
+  getDeleteImpact: async (graphId: string, nodeId: string): Promise<ApiResponse<NodeDeleteImpact>> => {
+    const response = await api.get(`/graphs/${graphId}/nodes/${nodeId}/delete-impact`)
     return response.data
   },
 

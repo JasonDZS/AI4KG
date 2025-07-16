@@ -155,9 +155,9 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
   }
 
   return (
-    <div className="h-full flex flex-col bg-white min-h-0">
+    <div className="h-full flex flex-col bg-white">
       {/* 标题栏 */}
-      <div className="p-4 border-b flex items-center justify-between flex-shrink-0">
+      <div className="p-4 border-b flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <h3 className="font-medium">节点属性</h3>
           {isEditing && (
@@ -175,7 +175,7 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
       </div>
       
       {/* 内容区域 */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0">
+      <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {/* 基本信息 */}
         <div className={`border rounded-lg p-4 ${isEditing ? 'border-blue-200 bg-blue-50/30' : 'border-gray-200'}`}>
           <h4 className="text-sm font-medium mb-3">基本信息</h4>
@@ -364,13 +364,13 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
       </div>
 
       {/* 操作按钮区域 */}
-      <div className="p-4 border-t bg-gray-50 flex-shrink-0">        
-        <div className="grid grid-cols-2 gap-3 mb-3">
+      <div className="p-4 border-t bg-gray-50">        
+        <div className="flex flex-wrap gap-2 mb-3">
           {!isEditing ? (
             <>
               <button
                 onClick={handleEdit}
-                className="flex items-center justify-center gap-2 px-3 py-3 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors"
               >
                 <Edit className="h-4 w-4" />
                 编辑节点
@@ -378,7 +378,7 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
               
               <button
                 onClick={handleDelete}
-                className="flex items-center justify-center gap-2 px-3 py-3 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 hover:bg-red-700 text-white text-sm font-medium rounded-md transition-colors"
               >
                 <Trash2 className="h-4 w-4" />
                 删除节点
@@ -389,7 +389,7 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
               <button
                 onClick={handleSave}
                 disabled={isSaving}
-                className="flex items-center justify-center gap-2 px-3 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white text-sm font-medium rounded-md transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white text-sm font-medium rounded-md transition-colors"
               >
                 <Save className="h-4 w-4" />
                 {isSaving ? '保存中...' : '保存更改'}
@@ -398,7 +398,7 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
               <button
                 onClick={handleCancel}
                 disabled={isSaving}
-                className="flex items-center justify-center gap-2 px-3 py-3 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white text-sm font-medium rounded-md transition-colors min-h-[44px]"
+                className="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 hover:bg-gray-700 disabled:bg-gray-400 disabled:cursor-not-allowed text-white text-sm font-medium rounded-md transition-colors"
               >
                 <RotateCcw className="h-4 w-4" />
                 取消编辑
