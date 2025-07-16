@@ -25,7 +25,7 @@ const NodePropertiesPanel: React.FC<NodePropertiesPanelProps> = ({
   const [newPropertyValue, setNewPropertyValue] = useState('')
 
   // 调试日志
-  console.log('NodePropertiesPanel rendered with:', { node, graphId, isEditing })
+  // console.log('NodePropertiesPanel rendered with:', { node, graphId, isEditing })
 
   // 重置编辑状态当节点改变时
   useEffect(() => {

@@ -72,17 +72,47 @@ class EdgeBase(BaseModel):
     weight: Optional[float] = None
     color: Optional[str] = None
 
-class EdgeCreate(EdgeBase):
-    pass
+class EdgeCreate(BaseModel):
+    source: Optional[str] = None
+    target: Optional[str] = None
+    source_node_id: Optional[str] = None
+    target_node_id: Optional[str] = None
+    label: Optional[str] = None
+    type: str
+    properties: Optional[Dict[str, Any]] = {}
+    weight: Optional[float] = None
+    color: Optional[str] = None
+    
+    @property
+    def effective_source(self) -> str:
+        """获取有效的源节点ID"""
+        return self.source or self.source_node_id
+    
+    @property
+    def effective_target(self) -> str:
+        """获取有效的目标节点ID"""
+        return self.target or self.target_node_id
 
 class EdgeUpdate(BaseModel):
     source: Optional[str] = None
     target: Optional[str] = None
+    source_node_id: Optional[str] = None
+    target_node_id: Optional[str] = None
     label: Optional[str] = None
     type: Optional[str] = None
     properties: Optional[Dict[str, Any]] = None
     weight: Optional[float] = None
     color: Optional[str] = None
+    
+    @property
+    def effective_source(self) -> Optional[str]:
+        """获取有效的源节点ID"""
+        return self.source or self.source_node_id
+    
+    @property
+    def effective_target(self) -> Optional[str]:
+        """获取有效的目标节点ID"""
+        return self.target or self.target_node_id
 
 class Edge(EdgeBase):
     id: str

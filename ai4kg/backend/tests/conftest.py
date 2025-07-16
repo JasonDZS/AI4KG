@@ -156,6 +156,54 @@ def sample_graph(client, authenticated_user, sample_graph_data):
     return graph_data["data"]
 
 
+@pytest.fixture
+def sample_graph_with_nodes(client, authenticated_user):
+    """创建包含节点的示例图谱"""
+    graph_data = {
+        "title": "测试图谱（含节点）",
+        "description": "这是一个包含节点的测试图谱",
+        "nodes": [
+            {
+                "id": "node-1",
+                "label": "节点1",
+                "type": "person",
+                "properties": {"name": "张三"}
+            },
+            {
+                "id": "node-2", 
+                "label": "节点2",
+                "type": "person",
+                "properties": {"name": "李四"}
+            },
+            {
+                "id": "node-3",
+                "label": "节点3",
+                "type": "organization",
+                "properties": {"name": "公司A"}
+            },
+            {
+                "id": "node-4",
+                "label": "节点4",
+                "type": "location",
+                "properties": {"name": "北京"}
+            }
+        ],
+        "edges": []
+    }
+    
+    response = client.post(
+        "/api/graphs",
+        json=graph_data,
+        headers=authenticated_user["headers"]
+    )
+    assert response.status_code == 200
+    
+    graph_data = response.json()
+    assert graph_data["success"] is True
+    
+    return graph_data["data"]
+
+
 # 测试标记
 pytest_plugins = ("pytest_asyncio",)
 

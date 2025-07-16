@@ -10,6 +10,7 @@ interface GraphCanvasProps {
   edges: GraphEdge[]
   onNodeClick?: (node: GraphNode) => void
   onEdgeClick?: (edge: GraphEdge) => void
+  onCanvasClick?: () => void
   selectedNodes?: string[]
   selectedEdges?: string[]
   onSelectionChange?: (selectedNodes: string[], selectedEdges: string[]) => void
@@ -20,6 +21,7 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
   edges,
   onNodeClick,
   onEdgeClick,
+  onCanvasClick,
   selectedNodes = [],
   selectedEdges = [],
 }) => {
@@ -27,6 +29,7 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
   const sigmaRef = useRef<Sigma | null>(null)
   const graphRef = useRef<Graph | null>(null)
   const [isLayoutRunning, setIsLayoutRunning] = useState(false)
+  const [hoveredNode, setHoveredNode] = useState<string | null>(null)
 
   useEffect(() => {
     if (!containerRef.current) return
@@ -80,6 +83,7 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
     // Remove all existing listeners
     sigma.removeAllListeners('clickNode')
     sigma.removeAllListeners('clickEdge')
+    sigma.removeAllListeners('clickStage')
     
     // Add updated listeners
     sigma.on('clickNode', ({ node }) => {
@@ -90,13 +94,13 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
     })
 
     sigma.on('clickEdge', ({ edge }) => {
-      console.log('Edge clicked:', edge)
+      // console.log('Edge clicked:', edge)
       const graph = graphRef.current!
       const edgeAttrs = graph.getEdgeAttributes(edge)
-      console.log('Edge attributes:', edgeAttrs)
+      // console.log('Edge attributes:', edgeAttrs)
       const edgeData = edges.find(e => e.id === edgeAttrs.id)
-      console.log('Found edge data:', edgeData)
-      console.log('Available edges:', edges)
+      // console.log('Found edge data:', edgeData)
+      // console.log('Available edges:', edges)
       if (edgeData && onEdgeClick) {
         console.log('Calling onEdgeClick with:', edgeData)
         onEdgeClick(edgeData)
@@ -104,7 +108,23 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
         console.log('Edge data not found or onEdgeClick not provided')
       }
     })
-  }, [nodes, edges, onNodeClick, onEdgeClick])
+
+    // Add click stage listener for clicking on empty space
+    sigma.on('clickStage', () => {
+      if (onCanvasClick) {
+        onCanvasClick()
+      }
+    })
+
+    // Add hover events for better interaction
+    sigma.on('enterNode', ({ node }) => {
+      setHoveredNode(node)
+    })
+
+    sigma.on('leaveNode', () => {
+      setHoveredNode(null)
+    })
+  }, [nodes, edges, onNodeClick, onEdgeClick, onCanvasClick])
 
   useEffect(() => {
     if (!graphRef.current || !sigmaRef.current) return
@@ -145,8 +165,8 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
           id: edge.id,
           properties: edge.properties,
           weight: edge.weight,
-          color: '#e74c3c', // Use red color to make edges more visible
-          size: 1, // Make edges thicker for easier clicking
+          color: edge.color || '#666666', // Default edge color
+          size: 1,
           edgeType: edge.type,
         })
       }
@@ -165,24 +185,76 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
     const graph = graphRef.current
     const sigma = sigmaRef.current
 
+    const hasSelection = selectedNodes.length > 0 || selectedEdges.length > 0
+
     // Update node selection colors
     graph.forEachNode((node) => {
       const isSelected = selectedNodes.includes(node)
+      const isHovered = hoveredNode === node
       const nodeData = nodes.find(n => n.id === node)
-      graph.setNodeAttribute(node, 'color', isSelected ? '#e74c3c' : 
-        nodeData?.color || '#3498db')
+      
+      let color: string
+      let size: number
+      if (hasSelection) {
+        if (isSelected) {
+          // 高亮选中的节点：使用红色并增大尺寸
+          color = '#e74c3c'
+          size = (nodeData?.size || 10) * 1.5
+        } else {
+          // 非选中节点：使用灰色并减小尺寸
+          color = '#d3d3d3'
+          size = (nodeData?.size || 10) * 0.7
+        }
+      } else if (isHovered) {
+        // 悬停状态：使用橙色
+        color = '#f39c12'
+        size = (nodeData?.size || 10) * 1.2
+      } else {
+        // 无选择时使用原始颜色和尺寸
+        color = nodeData?.color || '#3498db'
+        size = nodeData?.size || 10
+      }
+      
+      graph.setNodeAttribute(node, 'color', color)
+      graph.setNodeAttribute(node, 'size', size)
     })
 
     // Update edge selection colors
     graph.forEachEdge((edge) => {
       const edgeAttrs = graph.getEdgeAttributes(edge)
       const isSelected = selectedEdges.includes(edgeAttrs.id)
-      graph.setEdgeAttribute(edge, 'color', isSelected ? '#ff6b6b' : '#e74c3c')
-      graph.setEdgeAttribute(edge, 'size', isSelected ? 8 : 5)
+      const isConnectedToHovered = hoveredNode && (
+        graph.source(edge) === hoveredNode || graph.target(edge) === hoveredNode
+      )
+      
+      let color: string
+      let size: number
+      if (hasSelection) {
+        if (isSelected) {
+          // 高亮选中的边：使用红色并增加粗细
+          color = '#e74c3c'
+          size = 3
+        } else {
+          // 非选中边：使用浅灰色并减少粗细
+          color = '#e8e8e8'
+          size = 0.5
+        }
+      } else if (isConnectedToHovered) {
+        // 连接到悬停节点的边：使用橙色
+        color = '#f39c12'
+        size = 2
+      } else {
+        // 无选择时使用默认颜色和粗细
+        color = '#666666'
+        size = 1
+      }
+      
+      graph.setEdgeAttribute(edge, 'color', color)
+      graph.setEdgeAttribute(edge, 'size', size)
     })
 
     sigma.refresh()
-  }, [selectedNodes, selectedEdges, nodes, edges])
+  }, [selectedNodes, selectedEdges, nodes, edges, hoveredNode])
 
   const runForceLayout = () => {
     if (!graphRef.current || isLayoutRunning) return
@@ -242,28 +314,6 @@ const GraphCanvas: React.FC<GraphCanvasProps> = ({
 
   return (
     <div className="w-full h-full relative">
-      <div className="absolute top-4 left-4 z-10 flex flex-col space-y-2">
-        <button
-          onClick={runForceLayout}
-          disabled={isLayoutRunning}
-          className="px-3 py-1 bg-white shadow rounded text-sm hover:bg-gray-50 disabled:opacity-50"
-        >
-          {isLayoutRunning ? '布局中...' : '力导向布局'}
-        </button>
-        <button
-          onClick={runCircularLayout}
-          className="px-3 py-1 bg-white shadow rounded text-sm hover:bg-gray-50"
-        >
-          圆形布局
-        </button>
-        <button
-          onClick={runRandomLayout}
-          className="px-3 py-1 bg-white shadow rounded text-sm hover:bg-gray-50"
-        >
-          随机布局
-        </button>
-      </div>
-
       <div className="absolute top-4 right-4 z-10 flex flex-col space-y-2">
         <button
           onClick={zoomIn}

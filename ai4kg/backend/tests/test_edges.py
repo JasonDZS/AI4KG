@@ -21,7 +21,9 @@ class TestEdgeRetrieval:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "边获取功能待实现"
+        assert "成功获取" in data["message"]
+        assert "data" in data
+        assert isinstance(data["data"], list)
         assert "data" in data
         assert isinstance(data["data"], list)
     
@@ -78,9 +80,9 @@ class TestEdgeRetrieval:
 class TestEdgeCreation:
     """边创建测试"""
     
-    def test_create_edge_success(self, client: TestClient, authenticated_user, sample_graph, sample_edge_data):
+    def test_create_edge_success(self, client: TestClient, authenticated_user, sample_graph_with_nodes, sample_edge_data):
         """测试成功创建边"""
-        graph_id = sample_graph["id"]
+        graph_id = sample_graph_with_nodes["id"]
         
         # 扩展边数据，添加源节点和目标节点
         edge_data = sample_edge_data.copy()
@@ -98,7 +100,13 @@ class TestEdgeCreation:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "边创建功能待实现"
+        assert data["message"] == "边创建成功"
+        assert "data" in data
+        assert data["data"]["id"] is not None
+        assert data["data"]["source"] == "node-1"
+        assert data["data"]["target"] == "node-2"
+        assert data["data"]["type"] == "relationship"
+        assert data["data"]["label"] == "认识"
         # 当功能实现后，应该验证返回的边数据
         # assert "data" in data
         # edge = data["data"]
@@ -181,10 +189,27 @@ class TestEdgeCreation:
 class TestEdgeUpdate:
     """边更新测试"""
     
-    def test_update_edge_success(self, client: TestClient, authenticated_user, sample_graph):
+    def test_update_edge_success(self, client: TestClient, authenticated_user, sample_graph_with_nodes):
         """测试成功更新边"""
-        graph_id = sample_graph["id"]
-        edge_id = "test-edge-id"
+        graph_id = sample_graph_with_nodes["id"]
+        
+        # 首先创建一个边
+        edge_data = {
+            "source_node_id": "node-1",
+            "target_node_id": "node-2",
+            "type": "relationship",
+            "label": "初始关系",
+            "properties": {"since": "2020"}
+        }
+        
+        # 创建边
+        create_response = client.post(
+            f"/api/graphs/{graph_id}/edges",
+            json=edge_data,
+            headers=authenticated_user["headers"]
+        )
+        assert create_response.status_code == 200
+        edge_id = create_response.json()["data"]["id"]
         update_data = {
             "label": "更新后的关系",
             "properties": {"strength": "strong", "since": "2021"}
@@ -199,12 +224,33 @@ class TestEdgeUpdate:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "边更新功能待实现"
+        assert data["message"] == "边更新成功"
+        assert "data" in data
+        assert data["data"]["label"] == "更新后的关系"
+        assert data["data"]["properties"]["strength"] == "strong"
+        assert data["data"]["properties"]["since"] == "2021"
     
-    def test_update_edge_partial(self, client: TestClient, authenticated_user, sample_graph):
+    def test_update_edge_partial(self, client: TestClient, authenticated_user, sample_graph_with_nodes):
         """测试部分更新边"""
-        graph_id = sample_graph["id"]
-        edge_id = "test-edge-id"
+        graph_id = sample_graph_with_nodes["id"]
+        
+        # 首先创建一个边
+        edge_data = {
+            "source_node_id": "node-1",
+            "target_node_id": "node-2",
+            "type": "relationship",
+            "label": "初始关系",
+            "properties": {"since": "2020"}
+        }
+        
+        # 创建边
+        create_response = client.post(
+            f"/api/graphs/{graph_id}/edges",
+            json=edge_data,
+            headers=authenticated_user["headers"]
+        )
+        assert create_response.status_code == 200
+        edge_id = create_response.json()["data"]["id"]
         update_data = {
             "label": "只更新标签"
         }
@@ -256,10 +302,27 @@ class TestEdgeUpdate:
 class TestEdgeDeletion:
     """边删除测试"""
     
-    def test_delete_edge_success(self, client: TestClient, authenticated_user, sample_graph):
+    def test_delete_edge_success(self, client: TestClient, authenticated_user, sample_graph_with_nodes):
         """测试成功删除边"""
-        graph_id = sample_graph["id"]
-        edge_id = "test-edge-id"
+        graph_id = sample_graph_with_nodes["id"]
+        
+        # 首先创建一个边
+        edge_data = {
+            "source_node_id": "node-1",
+            "target_node_id": "node-2",
+            "type": "relationship",
+            "label": "待删除的边",
+            "properties": {"temp": True}
+        }
+        
+        # 创建边
+        create_response = client.post(
+            f"/api/graphs/{graph_id}/edges",
+            json=edge_data,
+            headers=authenticated_user["headers"]
+        )
+        assert create_response.status_code == 200
+        edge_id = create_response.json()["data"]["id"]
         
         response = client.delete(
             f"/api/graphs/{graph_id}/edges/{edge_id}",
@@ -269,7 +332,9 @@ class TestEdgeDeletion:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "边删除功能待实现"
+        assert data["message"] == "边删除成功"
+        assert "data" in data
+        assert data["data"]["deleted_edge_id"] == edge_id
     
     def test_delete_nonexistent_edge(self, client: TestClient, authenticated_user, sample_graph):
         """测试删除不存在的边"""
@@ -306,9 +371,9 @@ class TestEdgeDeletion:
 class TestEdgeBatchOperations:
     """边批量操作测试"""
     
-    def test_create_multiple_edges(self, client: TestClient, authenticated_user, sample_graph):
+    def test_create_multiple_edges(self, client: TestClient, authenticated_user, sample_graph_with_nodes):
         """测试批量创建边"""
-        graph_id = sample_graph["id"]
+        graph_id = sample_graph_with_nodes["id"]
         
         # 创建多个边
         edges_data = [
@@ -453,9 +518,9 @@ class TestEdgeValidation:
         # 根据实现，可能允许或禁止连接不存在的节点
         assert response.status_code in [200, 400, 422]
     
-    def test_create_duplicate_edge(self, client: TestClient, authenticated_user, sample_graph):
+    def test_create_duplicate_edge(self, client: TestClient, authenticated_user, sample_graph_with_nodes):
         """测试创建重复的边"""
-        graph_id = sample_graph["id"]
+        graph_id = sample_graph_with_nodes["id"]
         
         edge_data = {
             "label": "重复边",
