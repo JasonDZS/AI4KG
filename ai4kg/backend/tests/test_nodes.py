@@ -21,7 +21,8 @@ class TestNodeRetrieval:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "节点获取功能待实现"
+        assert "获取到" in data["message"]
+        assert "个节点" in data["message"]
         assert "data" in data
         assert isinstance(data["data"], list)
     
@@ -90,13 +91,12 @@ class TestNodeCreation:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "节点创建功能待实现"
-        # 当功能实现后，应该验证返回的节点数据
-        # assert "data" in data
-        # node = data["data"]
-        # assert node["label"] == sample_node_data["label"]
-        # assert node["type"] == sample_node_data["type"]
-        # assert node["properties"] == sample_node_data["properties"]
+        assert data["message"] == "节点创建成功"
+        assert "data" in data
+        node = data["data"]
+        assert node["label"] == sample_node_data["label"]
+        assert node["type"] == sample_node_data["type"]
+        assert node["properties"] == sample_node_data["properties"]
     
     def test_create_node_missing_label(self, client: TestClient, authenticated_user, sample_graph):
         """测试创建缺少标签的节点"""
@@ -159,10 +159,21 @@ class TestNodeCreation:
 class TestNodeUpdate:
     """节点更新测试"""
     
-    def test_update_node_success(self, client: TestClient, authenticated_user, sample_graph):
+    def test_update_node_success(self, client: TestClient, authenticated_user, sample_graph, sample_node_data):
         """测试成功更新节点"""
         graph_id = sample_graph["id"]
-        node_id = "test-node-id"
+        
+        # 先创建一个节点
+        create_response = client.post(
+            f"/api/graphs/{graph_id}/nodes",
+            json=sample_node_data,
+            headers=authenticated_user["headers"]
+        )
+        assert create_response.status_code == 200
+        created_node = create_response.json()["data"]
+        node_id = created_node["id"]
+        
+        # 更新节点
         update_data = {
             "label": "更新后的节点",
             "properties": {"name": "李四", "age": 25}
@@ -177,12 +188,23 @@ class TestNodeUpdate:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "节点更新功能待实现"
+        assert data["message"] == "节点更新成功"
     
-    def test_update_node_partial(self, client: TestClient, authenticated_user, sample_graph):
+    def test_update_node_partial(self, client: TestClient, authenticated_user, sample_graph, sample_node_data):
         """测试部分更新节点"""
         graph_id = sample_graph["id"]
-        node_id = "test-node-id"
+        
+        # 先创建一个节点
+        create_response = client.post(
+            f"/api/graphs/{graph_id}/nodes",
+            json=sample_node_data,
+            headers=authenticated_user["headers"]
+        )
+        assert create_response.status_code == 200
+        created_node = create_response.json()["data"]
+        node_id = created_node["id"]
+        
+        # 部分更新节点
         update_data = {
             "label": "只更新标签"
         }
@@ -205,8 +227,8 @@ class TestNodeUpdate:
             json=update_data,
             headers=authenticated_user["headers"]
         )
-        # 目前返回成功，但实现后应该返回404
-        assert response.status_code in [200, 404]
+        # 应该返回404因为节点不存在
+        assert response.status_code == 404
     
     def test_update_node_invalid_graph_id(self, client: TestClient, authenticated_user):
         """测试在无效图谱ID中更新节点"""
@@ -234,11 +256,21 @@ class TestNodeUpdate:
 class TestNodeDeletion:
     """节点删除测试"""
     
-    def test_delete_node_success(self, client: TestClient, authenticated_user, sample_graph):
+    def test_delete_node_success(self, client: TestClient, authenticated_user, sample_graph, sample_node_data):
         """测试成功删除节点"""
         graph_id = sample_graph["id"]
-        node_id = "test-node-id"
         
+        # 先创建一个节点
+        create_response = client.post(
+            f"/api/graphs/{graph_id}/nodes",
+            json=sample_node_data,
+            headers=authenticated_user["headers"]
+        )
+        assert create_response.status_code == 200
+        created_node = create_response.json()["data"]
+        node_id = created_node["id"]
+        
+        # 删除节点
         response = client.delete(
             f"/api/graphs/{graph_id}/nodes/{node_id}",
             headers=authenticated_user["headers"]
@@ -247,7 +279,7 @@ class TestNodeDeletion:
         
         data = response.json()
         assert data["success"] is True
-        assert data["message"] == "节点删除功能待实现"
+        assert "节点删除成功" in data["message"]
     
     def test_delete_nonexistent_node(self, client: TestClient, authenticated_user, sample_graph):
         """测试删除不存在的节点"""
@@ -258,8 +290,8 @@ class TestNodeDeletion:
             f"/api/graphs/{graph_id}/nodes/{fake_node_id}",
             headers=authenticated_user["headers"]
         )
-        # 目前返回成功，但实现后应该返回404
-        assert response.status_code in [200, 404]
+        # 应该返回404因为节点不存在
+        assert response.status_code == 404
     
     def test_delete_node_invalid_graph_id(self, client: TestClient, authenticated_user):
         """测试在无效图谱ID中删除节点"""

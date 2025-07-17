@@ -125,8 +125,8 @@ class TestEdgeCreation:
             json=sample_edge_data,
             headers=authenticated_user["headers"]
         )
-        # 目前返回成功，但实现后应该返回422
-        assert response.status_code in [200, 422]
+        # 实现后应该返回400因为缺少必要的节点信息
+        assert response.status_code == 400
     
     def test_create_edge_same_source_target(self, client: TestClient, authenticated_user, sample_graph, sample_edge_data):
         """测试创建源节点和目标节点相同的边（自环）"""

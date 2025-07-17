@@ -39,6 +39,8 @@ class TestCompleteWorkflow:
             headers=headers
         )
         assert node_response.status_code == 200
+        node1 = node_response.json()["data"]
+        node1_id = node1["id"]
         
         # 4. 添加另一个节点
         node2_data = {
@@ -52,13 +54,15 @@ class TestCompleteWorkflow:
             headers=headers
         )
         assert node2_response.status_code == 200
+        node2 = node2_response.json()["data"]
+        node2_id = node2["id"]
         
         # 5. 添加边
         edge_data = {
             "label": "认识",
             "type": "relationship",
-            "source_node_id": "node-1",
-            "target_node_id": "node-2",
+            "source_node_id": node1_id,
+            "target_node_id": node2_id,
             "properties": {"since": "2020"}
         }
         edge_response = client.post(

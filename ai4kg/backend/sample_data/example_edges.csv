@@ -1,0 +1,6 @@
+id,source,target,label,type,weight
+edge_1,Alice,Bob,朋友,FRIEND,0.8
+edge_2,Bob,Charlie,同事,COLLEAGUE,0.7
+edge_3,Alice,Company_A,工作于,WORKS_AT,1.0
+edge_4,Bob,Company_A,工作于,WORKS_AT,1.0
+edge_5,Charlie,Company_B,工作于,WORKS_AT,1.0

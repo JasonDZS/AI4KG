@@ -1,0 +1,87 @@
+{
+  "graph": {
+    "title": "示例知识图谱",
+    "description": "一个简单的示例图谱，包含人物和关系"
+  },
+  "nodes": [
+    {
+      "id": "person_1",
+      "label": "张三",
+      "type": "Person",
+      "properties": {
+        "age": 30,
+        "profession": "工程师"
+      },
+      "x": 100,
+      "y": 100,
+      "size": 10,
+      "color": "#ff6b6b"
+    },
+    {
+      "id": "person_2", 
+      "label": "李四",
+      "type": "Person",
+      "properties": {
+        "age": 28,
+        "profession": "设计师"
+      },
+      "x": 200,
+      "y": 150,
+      "size": 10,
+      "color": "#4ecdc4"
+    },
+    {
+      "id": "company_1",
+      "label": "ABC科技公司",
+      "type": "Company",
+      "properties": {
+        "founded": 2010,
+        "employees": 500
+      },
+      "x": 150,
+      "y": 250,
+      "size": 15,
+      "color": "#45b7d1"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "source": "person_1",
+      "target": "person_2",
+      "label": "朋友",
+      "type": "FRIEND",
+      "properties": {
+        "since": "2020-01-01"
+      },
+      "weight": 0.8,
+      "color": "#96ceb4"
+    },
+    {
+      "id": "edge_2",
+      "source": "person_1",
+      "target": "company_1",
+      "label": "工作于",
+      "type": "WORKS_AT",
+      "properties": {
+        "position": "高级工程师",
+        "start_date": "2021-03-01"
+      },
+      "weight": 1.0,
+      "color": "#feca57"
+    },
+    {
+      "id": "edge_3",
+      "source": "person_2",
+      "target": "company_1",
+      "label": "工作于",
+      "type": "WORKS_AT",
+      "properties": {
+        "position": "UI设计师",
+        "start_date": "2021-06-01"
+      },
+      "weight": 1.0,
+      "color": "#feca57"
+    }
+  ]
+}

@@ -46,6 +46,7 @@ class NodeBase(BaseModel):
 
 class NodeCreate(NodeBase):
     id: Optional[str] = None
+    node_id: Optional[str] = None
 
 class NodeUpdate(BaseModel):
     label: Optional[str] = None
@@ -73,6 +74,8 @@ class EdgeBase(BaseModel):
     color: Optional[str] = None
 
 class EdgeCreate(BaseModel):
+    id: Optional[str] = None
+    edge_id: Optional[str] = None
     source: Optional[str] = None
     target: Optional[str] = None
     source_node_id: Optional[str] = None
