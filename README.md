@@ -4,6 +4,8 @@ Build &amp; Edit Knowledge Graph by AI
 [![Documentation](https://img.shields.io/badge/docs-github%20pages-blue)](https://JasonDZS.github.io/AI4KG/)
 [![GitHub Pages](https://github.com/JasonDZS/AI4KG/actions/workflows/deploy-docs.yml/badge.svg)](https://github.com/JasonDZS/AI4KG/actions/workflows/deploy-docs.yml)
 
+![AI4KG](imgs/AI4KG.png)
+
 ## 📖 Documentation
 
 Visit our comprehensive documentation at: **[https://JasonDZS.github.io/AI4KG/](https://JasonDZS.github.io/AI4KG/)**
