@@ -1,6 +1,7 @@
 <!-- docs/_sidebar.md -->
 
 * [主页](/)
+* [使用教程](/guide.md)
 * [API](/api/API.md)
     * [认证模块](/api/auth.md)
     * [图谱管理](/api/graphs.md)
