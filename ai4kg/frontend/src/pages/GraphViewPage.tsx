@@ -39,6 +39,7 @@ const GraphViewPage = () => {
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null)
   const [selectedEdge, setSelectedEdge] = useState<GraphEdge | null>(null)
   const [isTableViewOpen, setIsTableViewOpen] = useState(false)
+  const [isPropertiesPanelOpen, setIsPropertiesPanelOpen] = useState(true)
   const [activeTab, setActiveTab] = useState<'nodes' | 'edges'>('nodes')
   const [highlightMode, setHighlightMode] = useState<'direct' | 'extended'>('direct')
   const [isSelectionLocked, setIsSelectionLocked] = useState(false)
@@ -462,6 +463,18 @@ const GraphViewPage = () => {
     })
   }, [selectedNodes, selectedEdges, nodes, edges])
 
+  // Handle chart resize when sidebars are toggled
+  useEffect(() => {
+    if (chartInstanceRef.current) {
+      // Use setTimeout to wait for CSS transition to complete
+      const timer = setTimeout(() => {
+        chartInstanceRef.current?.resize()
+      }, 300) // Match the transition duration
+      
+      return () => clearTimeout(timer)
+    }
+  }, [isTableViewOpen, isPropertiesPanelOpen])
+
   if (isLoading) {
     return (
       <div className="flex items-center justify-center h-full">
@@ -489,7 +502,7 @@ const GraphViewPage = () => {
         <div className="flex items-center justify-between">
           <div>
             <h1 className="text-2xl font-bold">{title}</h1>
-            <p className="text-muted-foreground">{description}</p>
+            <p className="text-gray-600">{description}</p>
           </div>
           <div className="text-xs text-gray-500 text-right">
             <div>💡 点击节点/边高亮相关连接</div>
@@ -572,7 +585,7 @@ const GraphViewPage = () => {
 
       <div className="flex-1 flex min-h-0">
         {/* 左侧表格视图 */}
-        <div className={`bg-background border-r transition-all duration-300 ${
+        <div className={`bg-white border-r transition-all duration-300 ${
           isTableViewOpen ? 'w-96' : 'w-12'
         }`}>
           {/* 展开/收起按钮 */}
@@ -695,73 +708,102 @@ const GraphViewPage = () => {
           />
         </div>
 
-        <div className="w-80 border-l bg-background flex-shrink-0">
-          {selectedNode && (
-            <NodePropertiesPanel
-              node={selectedNode}
-              graphId={graphId!}
-              onClose={() => setSelectedNode(null)}
-              onNodeUpdate={(updatedNode) => {
-                setSelectedNode(updatedNode)
-                // 更新React Query缓存中的节点数据
-                queryClient.setQueryData(['graph', graphId], (oldData: any) => {
-                  if (!oldData?.data) return oldData
-                  
-                  return {
-                    ...oldData,
-                    data: {
-                      ...oldData.data,
-                      nodes: oldData.data.nodes.map((node: GraphNode) =>
-                        node.id === updatedNode.id ? updatedNode : node
-                      )
-                    }
-                  }
-                })
-              }}
-              onNodeDelete={(nodeId) => {
-                // 从React Query缓存中删除节点
-                queryClient.setQueryData(['graph', graphId], (oldData: any) => {
-                  if (!oldData?.data) return oldData
-                  
-                  return {
-                    ...oldData,
-                    data: {
-                      ...oldData.data,
-                      nodes: oldData.data.nodes.filter((node: GraphNode) => node.id !== nodeId),
-                      edges: oldData.data.edges.filter((edge: GraphEdge) => 
-                        edge.source !== nodeId && edge.target !== nodeId
-                      )
-                    }
-                  }
-                })
-              }}
-            />
-          )}
-          {selectedEdge && (
-            <EdgePropertiesPanel
-              edge={selectedEdge}
-              onClose={() => setSelectedEdge(null)}
-            />
-          )}
-          {!selectedNode && !selectedEdge && (
-            <div className="p-4 text-center text-muted-foreground">
-              <div>点击节点或边查看属性</div>
-              {nodes?.length > 0 && (
-                <div className="mt-4 space-y-2">
-                  <p className="text-xs">调试工具：</p>
-                  <button 
-                    onClick={() => handleNodeClick(nodes[0])}
-                    className="block w-full px-3 py-2 bg-blue-100 text-blue-800 rounded text-sm hover:bg-blue-200"
-                  >
-                    选择节点: {nodes[0]?.label || nodes[0]?.id}
-                  </button>
-                  <div className="text-xs text-gray-500">
-                    图谱包含 {nodes.length} 个节点
-                  </div>
-                </div>
-              )}
+        {/* 右侧属性面板 */}
+        <div className={`border-l bg-white flex-shrink-0 transition-all duration-300 ${
+          isPropertiesPanelOpen ? 'w-80' : 'w-12'
+        }`}>
+          {/* 展开/收起按钮 */}
+          <div className="h-full flex flex-col">
+            <div className="flex-shrink-0 p-2 border-b">
+              <button
+                onClick={() => setIsPropertiesPanelOpen(!isPropertiesPanelOpen)}
+                className="w-full h-8 flex items-center justify-center bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors"
+                title={isPropertiesPanelOpen ? "收起属性面板" : "展开属性面板"}
+              >
+                {isPropertiesPanelOpen ? (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                ) : (
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                )}
+              </button>
             </div>
-          )}
+            
+            {/* 属性面板内容 */}
+            {isPropertiesPanelOpen && (
+              <div className="flex-1 overflow-hidden">
+                {selectedNode && (
+                  <NodePropertiesPanel
+                    node={selectedNode}
+                    graphId={graphId!}
+                    onClose={() => setSelectedNode(null)}
+                    onNodeUpdate={(updatedNode) => {
+                      setSelectedNode(updatedNode)
+                      // 更新React Query缓存中的节点数据
+                      queryClient.setQueryData(['graph', graphId], (oldData: any) => {
+                        if (!oldData?.data) return oldData
+                        
+                        return {
+                          ...oldData,
+                          data: {
+                            ...oldData.data,
+                            nodes: oldData.data.nodes.map((node: GraphNode) =>
+                              node.id === updatedNode.id ? updatedNode : node
+                            )
+                          }
+                        }
+                      })
+                    }}
+                    onNodeDelete={(nodeId) => {
+                      // 从React Query缓存中删除节点
+                      queryClient.setQueryData(['graph', graphId], (oldData: any) => {
+                        if (!oldData?.data) return oldData
+                        
+                        return {
+                          ...oldData,
+                          data: {
+                            ...oldData.data,
+                            nodes: oldData.data.nodes.filter((node: GraphNode) => node.id !== nodeId),
+                            edges: oldData.data.edges.filter((edge: GraphEdge) => 
+                              edge.source !== nodeId && edge.target !== nodeId
+                            )
+                          }
+                        }
+                      })
+                    }}
+                  />
+                )}
+                {selectedEdge && (
+                  <EdgePropertiesPanel
+                    edge={selectedEdge}
+                    onClose={() => setSelectedEdge(null)}
+                  />
+                )}
+                {!selectedNode && !selectedEdge && (
+                  <div className="p-4 text-center text-gray-500">
+                    <div>点击节点或边查看属性</div>
+                    {nodes?.length > 0 && (
+                      <div className="mt-4 space-y-2">
+                        <p className="text-xs">调试工具：</p>
+                        <button 
+                          onClick={() => handleNodeClick(nodes[0])}
+                          className="block w-full px-3 py-2 bg-blue-100 text-blue-800 rounded text-sm hover:bg-blue-200"
+                        >
+                          选择节点: {nodes[0]?.label || nodes[0]?.id}
+                        </button>
+                        <div className="text-xs text-gray-500">
+                          图谱包含 {nodes.length} 个节点
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

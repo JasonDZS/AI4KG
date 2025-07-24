@@ -57,19 +57,7 @@ async def create_edge(
     try:
         graph_service = GraphService(db)
         
-        # 验证图谱是否存在且属于当前用户
-        graph = graph_service.get_graph_by_id(str(graph_id), current_user)
-        if not graph:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="图谱不存在"
-            )
-        
-        # 获取当前图谱数据
-        current_graph_data = graph_service.get_graph_with_data(str(graph_id), current_user)
-        
-        # 验证源节点和目标节点是否存在
-        nodes = current_graph_data.get("nodes", [])
+        # 获取源节点和目标节点ID
         source_id = edge_data.effective_source
         target_id = edge_data.effective_target
         
@@ -85,31 +73,8 @@ async def create_edge(
                 detail="必须提供目标节点ID (target 或 target_node_id)"
             )
         
-        source_exists = any(n["id"] == source_id for n in nodes)
-        target_exists = any(n["id"] == target_id for n in nodes)
-        
-        if not source_exists:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"源节点 '{source_id}' 不存在"
-            )
-        
-        if not target_exists:
-            raise HTTPException(
-                status_code=status.HTTP_400_BAD_REQUEST,
-                detail=f"目标节点 '{target_id}' 不存在"
-            )
-        
-        # 生成新边ID
-        new_edge_id = str(uuid.uuid4())
-        
-        # 检查是否已存在相同的边
-        existing_edge = next((e for e in current_graph_data.get("edges", []) 
-                            if e["source"] == source_id and e["target"] == target_id), None)
-        
-        # 创建新边数据
-        new_edge = {
-            "id": new_edge_id,
+        # 创建边数据
+        edge_dict = {
             "source": source_id,
             "target": target_id,
             "label": edge_data.label or "",
@@ -119,20 +84,8 @@ async def create_edge(
             "properties": edge_data.properties or {}
         }
         
-        # 添加到现有数据中
-        updated_nodes = current_graph_data.get("nodes", [])
-        updated_edges = current_graph_data.get("edges", []) + [new_edge]
-        
-        # 更新图谱数据
-        from app.schemas.schemas import GraphUpdate
-        update_data = GraphUpdate(
-            title=graph.title,
-            description=graph.description,
-            nodes=updated_nodes,
-            edges=updated_edges
-        )
-        
-        graph_service.update_graph(str(graph_id), update_data, current_user)
+        # 使用新的服务方法直接添加边
+        new_edge = graph_service.add_edge(str(graph_id), edge_dict, current_user)
         
         return DataResponse(
             success=True,
@@ -160,88 +113,29 @@ async def update_edge(
     try:
         graph_service = GraphService(db)
         
-        # 验证图谱是否存在且属于当前用户
-        graph = graph_service.get_graph_by_id(str(graph_id), current_user)
-        if not graph:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="图谱不存在"
-            )
-        
-        # 获取当前图谱数据
-        current_graph_data = graph_service.get_graph_with_data(str(graph_id), current_user)
-        
-        # 查找要更新的边
-        edges = current_graph_data.get("edges", [])
-        edge_to_update = None
-        edge_index = -1
-        
-        for i, edge in enumerate(edges):
-            if edge["id"] == edge_id:
-                edge_to_update = edge
-                edge_index = i
-                break
-        
-        if not edge_to_update:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"边 '{edge_id}' 不存在"
-            )
-        
-        # 如果更新了源节点或目标节点，需要验证节点是否存在
-        nodes = current_graph_data.get("nodes", [])
+        # 构建更新数据
+        update_dict = {}
         
         effective_source = edge_data.effective_source
         effective_target = edge_data.effective_target
         
         if effective_source is not None:
-            source_exists = any(n["id"] == effective_source for n in nodes)
-            if not source_exists:
-                raise HTTPException(
-                    status_code=status.HTTP_400_BAD_REQUEST,
-                    detail=f"源节点 '{effective_source}' 不存在"
-                )
-        
+            update_dict["source"] = effective_source
         if effective_target is not None:
-            target_exists = any(n["id"] == effective_target for n in nodes)
-            if not target_exists:
-                raise HTTPException(
-                    status_code=status.HTTP_400_BAD_REQUEST,
-                    detail=f"目标节点 '{effective_target}' 不存在"
-                )
-        
-        # 更新边数据
-        updated_edge = edge_to_update.copy()
-        
-        if effective_source is not None:
-            updated_edge["source"] = effective_source
-        if effective_target is not None:
-            updated_edge["target"] = effective_target
+            update_dict["target"] = effective_target
         if edge_data.label is not None:
-            updated_edge["label"] = edge_data.label
+            update_dict["label"] = edge_data.label
         if edge_data.type is not None:
-            updated_edge["type"] = edge_data.type
+            update_dict["type"] = edge_data.type
         if edge_data.weight is not None:
-            updated_edge["weight"] = edge_data.weight
+            update_dict["weight"] = edge_data.weight
         if edge_data.color is not None:
-            updated_edge["color"] = edge_data.color
+            update_dict["color"] = edge_data.color
         if edge_data.properties is not None:
-            updated_edge["properties"] = edge_data.properties
+            update_dict["properties"] = edge_data.properties
         
-        # 更新边列表
-        updated_edges = edges.copy()
-        updated_edges[edge_index] = updated_edge
-        
-        # 更新图谱数据
-        from app.schemas.schemas import GraphUpdate
-        update_data = GraphUpdate(
-            title=graph.title,
-            description=graph.description,
-            nodes=current_graph_data.get("nodes", []),
-            edges=updated_edges
-        )
-        
-        graph_service.update_graph(str(graph_id), update_data, current_user)
+        # 使用新的服务方法直接更新边
+        updated_edge = graph_service.update_edge(str(graph_id), edge_id, update_dict, current_user)
         
         return DataResponse(
             success=True,
@@ -268,53 +162,13 @@ async def delete_edge(
     try:
         graph_service = GraphService(db)
         
-        # 验证图谱是否存在且属于当前用户
-        graph = graph_service.get_graph_by_id(str(graph_id), current_user)
-        if not graph:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail="图谱不存在"
-            )
-        
-        # 获取当前图谱数据
-        current_graph_data = graph_service.get_graph_with_data(str(graph_id), current_user)
-        
-        # 查找要删除的边
-        edges = current_graph_data.get("edges", [])
-        edge_to_delete = None
-        
-        for edge in edges:
-            if edge["id"] == edge_id:
-                edge_to_delete = edge
-                break
-        
-        if not edge_to_delete:
-            raise HTTPException(
-                status_code=status.HTTP_404_NOT_FOUND,
-                detail=f"边 '{edge_id}' 不存在"
-            )
-        
-        # 从边列表中移除指定的边
-        updated_edges = [edge for edge in edges if edge["id"] != edge_id]
-        
-        # 更新图谱数据
-        from app.schemas.schemas import GraphUpdate
-        update_data = GraphUpdate(
-            title=graph.title,
-            description=graph.description,
-            nodes=current_graph_data.get("nodes", []),
-            edges=updated_edges
-        )
-        
-        graph_service.update_graph(str(graph_id), update_data, current_user)
+        # 使用新的服务方法直接删除边
+        result = graph_service.delete_edge(str(graph_id), edge_id, current_user)
         
         return DataResponse(
             success=True,
-            message="边删除成功",
-            data={
-                "deleted_edge_id": edge_id,
-                "deleted_edge": edge_to_delete
-            }
+            message=result["message"],
+            data=result
         )
         
     except HTTPException:

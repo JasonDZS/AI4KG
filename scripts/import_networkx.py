@@ -58,17 +58,17 @@ class NetworkXImporter:
         
         # 节点类型对应的颜色映射
         self.type_colors = {
-            'person': '#FF6B6B',
-            'organization': '#4ECDC4', 
-            'location': '#45B7D1',
-            'concept': '#96CEB4',
-            'event': '#FFEAA7',
-            'object': '#DDA0DD',
-            'entity': '#95A5A6',
-            'relationship': '#F39C12',
-            'default': '#BDC3C7'
+            'person': '#FF4C4C',  # 鲜红（醒目且易识别）
+            'organization': '#3D8BFF',  # 鲜亮蓝（专业感、科技感）
+            'location': '#00C897',  # 鲜绿松（自然、地点联想）
+            'concept': '#A259FF',  # 明亮紫（抽象、高级感）
+            'event': '#FFD21F',  # 鲜黄（突出事件/时间点）
+            'object': '#FF7A00',  # 橘色（具象事物，温暖）
+            'entity': '#00B2FF',  # 青蓝（常规实体，清晰高亮）
+            'relationship': '#FF3CAC',  # 玫红渐变色（强调连接性）
+            'default': '#FFA500'  # 亮橙（避免灰，保有视觉统一）
         }
-    
+
     def load_graph(self, file_path: str, format_hint: Optional[str] = None) -> nx.Graph:
         """加载NetworkX图数据"""
         file_path = Path(file_path)
