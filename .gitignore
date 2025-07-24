@@ -213,3 +213,4 @@ logs
 node_modules/
 .claude/
 .cursor/
+.idea
