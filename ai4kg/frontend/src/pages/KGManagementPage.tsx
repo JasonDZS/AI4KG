@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { graphsApi } from '@/services/api'
 import type { Graph, GraphData, GraphNode, GraphEdge } from '@/types'
+import NodePropertiesPanel from '@/components/Graph/NodePropertiesPanel'
+import EdgePropertiesPanel from '@/components/Graph/EdgePropertiesPanel'
 import * as echarts from 'echarts/core'
 import {
   TooltipComponent,
@@ -29,7 +31,10 @@ const KGManagementPage: React.FC = () => {
   const [selectedGraph, setSelectedGraph] = useState<GraphData | null>(null)
   const [loading, setLoading] = useState(true)
   const [graphLoading, setGraphLoading] = useState(false)
+  const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null)
+  const [selectedEdge, setSelectedEdge] = useState<GraphEdge | null>(null)
   const chartRef = useRef<HTMLDivElement>(null)
+  const chartInstanceRef = useRef<echarts.EChartsType | null>(null)
 
   // Fetch graphs on component mount
   useEffect(() => {
@@ -52,6 +57,8 @@ const KGManagementPage: React.FC = () => {
   // Handle graph selection
   const handleGraphSelect = async (graphId: string) => {
     setGraphLoading(true)
+    setSelectedNode(null)
+    setSelectedEdge(null)
     try {
       const response = await graphsApi.getGraph(graphId)
       if (response.success && response.data) {
@@ -64,11 +71,31 @@ const KGManagementPage: React.FC = () => {
     }
   }
 
+  // Handle node click
+  const handleNodeClick = useCallback((node: GraphNode) => {
+    console.log('Node clicked:', node)
+    setSelectedNode(node)
+    setSelectedEdge(null)
+  }, [])
+
+  // Handle edge click
+  const handleEdgeClick = useCallback((edge: GraphEdge) => {
+    console.log('Edge clicked:', edge)
+    setSelectedEdge(edge)
+    setSelectedNode(null)
+  }, [])
+
   // Initialize chart when graph data changes
   useEffect(() => {
     if (!chartRef.current || !selectedGraph) return
 
+    // Dispose previous chart instance if exists
+    if (chartInstanceRef.current) {
+      chartInstanceRef.current.dispose()
+    }
+
     const myChart = echarts.init(chartRef.current)
+    chartInstanceRef.current = myChart
 
     if (graphLoading) {
       myChart.showLoading()
@@ -153,10 +180,33 @@ const KGManagementPage: React.FC = () => {
 
     myChart.setOption(option)
 
+    // Handle click events
+    myChart.on('click', (params: any) => {
+      console.log('Chart clicked:', params)
+      if (params.dataType === 'node') {
+        const clickedNode = selectedGraph.nodes.find(n => n.id === params.data.id)
+        if (clickedNode) {
+          handleNodeClick(clickedNode)
+        }
+      } else if (params.dataType === 'edge') {
+        // Find edge by source and target match
+        const clickedEdge = selectedGraph.edges.find(e => 
+          (e.source === params.data.source && e.target === params.data.target) ||
+          (e.source === params.data.target && e.target === params.data.source)
+        )
+        if (clickedEdge) {
+          handleEdgeClick(clickedEdge)
+        }
+      }
+    })
+
     return () => {
-      myChart.dispose()
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.dispose()
+        chartInstanceRef.current = null
+      }
     }
-  }, [selectedGraph, graphLoading])
+  }, [selectedGraph, graphLoading, handleNodeClick, handleEdgeClick])
 
   if (loading) {
     return (
@@ -208,7 +258,7 @@ const KGManagementPage: React.FC = () => {
         </div>
 
         {/* Right Panel - Split Layout */}
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex">
           {!selectedGraph ? (
             <div className="flex-1 flex items-center justify-center">
               <div className="text-center text-gray-500">
@@ -218,18 +268,20 @@ const KGManagementPage: React.FC = () => {
             </div>
           ) : (
             <>
-              {/* Graph Visualization */}
-              <div className="flex-1 p-4">
-                <div className="h-full border border-gray-200 rounded-lg overflow-hidden">
-                  <div 
-                    ref={chartRef} 
-                    className="w-full h-full"
-                  />
+              {/* Main Content Area */}
+              <div className="flex-1 flex flex-col">
+                {/* Graph Visualization */}
+                <div className="flex-1 p-4">
+                  <div className="h-full border border-gray-200 rounded-lg overflow-hidden">
+                    <div 
+                      ref={chartRef} 
+                      className="w-full h-full"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Data Tables */}
-              <div className="h-80 border-t bg-white p-4 overflow-y-auto">
+                {/* Data Tables */}
+                <div className="h-80 border-t bg-white p-4 overflow-y-auto">
                 <div className="grid grid-cols-2 gap-4 h-full">
                   {/* Nodes Table */}
                   <div className="border border-gray-200 rounded-lg overflow-hidden">
@@ -301,6 +353,35 @@ const KGManagementPage: React.FC = () => {
                     </div>
                   </div>
                 </div>
+              </div>
+              </div>
+
+              {/* Right Sidebar - Properties Panel */}
+              <div className="w-80 border-l bg-white flex-shrink-0">
+                {selectedNode && (
+                  <NodePropertiesPanel
+                    node={selectedNode}
+                    graphId={selectedGraph.id}
+                    onClose={() => setSelectedNode(null)}
+                    onNodeUpdate={(updatedNode) => {
+                      setSelectedNode(updatedNode)
+                    }}
+                    onNodeDelete={(nodeId) => {
+                      setSelectedNode(null)
+                    }}
+                  />
+                )}
+                {selectedEdge && (
+                  <EdgePropertiesPanel
+                    edge={selectedEdge}
+                    onClose={() => setSelectedEdge(null)}
+                  />
+                )}
+                {!selectedNode && !selectedEdge && (
+                  <div className="p-4 text-center text-gray-500">
+                    <div>点击节点或边查看属性</div>
+                  </div>
+                )}
               </div>
             </>
           )}

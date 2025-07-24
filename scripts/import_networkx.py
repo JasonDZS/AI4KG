@@ -247,12 +247,26 @@ class NetworkXImporter:
         """将NetworkX图转换为AI4KG后端格式"""
         logger.info(f"转换图数据: {len(G.nodes)} 节点, {len(G.edges)} 边")
         
+        # 创建节点名称到ID的映射（用于边的转换）
+        # 在GraphML中，节点的名称可能用作边的source/target，但我们需要使用节点的ID
+        node_name_to_id = {}
+        node_id_to_name = {}
+        
         # 转换节点 - 适配后端Node模型
         nodes = []
         for node_id, attrs in G.nodes(data=True):
+            # 生成唯一的节点ID（如果node_id本身不适合作为ID）
+            business_id = str(node_id)
+            node_label = attrs.get('label', str(node_id))
+            
+            # 建立映射关系：节点名称 -> 节点ID
+            node_name_to_id[str(node_id)] = business_id  # NetworkX中的node_id -> 业务ID
+            node_name_to_id[node_label] = business_id     # 节点标签 -> 业务ID
+            node_id_to_name[business_id] = node_label
+            
             node = {
-                "id": str(node_id),  # 业务ID，对应backend的node_id字段
-                "label": attrs.get('label', str(node_id)),
+                "id": business_id,  # 业务ID，对应backend的node_id字段
+                "label": node_label,
                 "type": self._infer_node_type(attrs),
                 "properties": self._clean_attributes(attrs, exclude=['label', 'type', 'x', 'y', 'size', 'color'])
             }
@@ -309,10 +323,21 @@ class NetworkXImporter:
         # 转换边 - 适配后端Edge模型
         edges = []
         for source, target, attrs in G.edges(data=True):
+            # 将source和target从节点名称转换为节点ID
+            source_id = node_name_to_id.get(str(source))
+            target_id = node_name_to_id.get(str(target))
+            
+            if source_id is None:
+                logger.warning(f"边的源节点 '{source}' 未找到对应的节点ID，跳过此边")
+                continue
+            if target_id is None:
+                logger.warning(f"边的目标节点 '{target}' 未找到对应的节点ID，跳过此边")
+                continue
+            
             edge = {
-                "id": attrs.get('id', f"{source}-{target}"),  # 业务ID，对应backend的edge_id字段
-                "source_node_id": str(source),  # 后端使用source_node_id
-                "target_node_id": str(target),  # 后端使用target_node_id
+                "id": attrs.get('id', f"{source_id}-{target_id}"),  # 业务ID，对应backend的edge_id字段
+                "source_node_id": source_id,  # 使用映射后的节点ID
+                "target_node_id": target_id,  # 使用映射后的节点ID
                 "label": attrs.get('label', attrs.get('relation', '')),
                 "type": attrs.get('type', attrs.get('relation', 'relationship')),
                 "properties": self._clean_attributes(attrs, exclude=['label', 'type', 'weight', 'color'])
