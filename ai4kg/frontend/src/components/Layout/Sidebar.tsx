@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 import { cn } from '@/lib/utils'
-import { Home, Network } from 'lucide-react'
+import { Home, Network, GitBranch, Settings } from 'lucide-react'
 
 const Sidebar = () => {
   const location = useLocation()
@@ -8,6 +8,8 @@ const Sidebar = () => {
   const navigation = [
     { name: '图谱列表', href: '/', icon: Home },
     { name: '图谱视图', href: '/graphs', icon: Network },
+    { name: 'KG示例', href: '/kg-example', icon: GitBranch },
+    { name: 'KG管理', href: '/kg-management', icon: Settings },
   ]
 
   return (

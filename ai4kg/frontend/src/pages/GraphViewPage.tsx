@@ -1,30 +1,165 @@
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { useParams } from 'react-router-dom'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
+import * as echarts from 'echarts/core'
+import {
+  TooltipComponent,
+  TooltipComponentOption,
+  LegendComponent,
+  LegendComponentOption
+} from 'echarts/components'
+import { GraphChart, GraphSeriesOption } from 'echarts/charts'
+import { LabelLayout } from 'echarts/features'
+import { CanvasRenderer } from 'echarts/renderers'
 import { graphsApi } from '@/services/api'
-import GraphCanvas from '@/components/Graph/GraphCanvas'
 import NodePropertiesPanel from '@/components/Graph/NodePropertiesPanel'
 import EdgePropertiesPanel from '@/components/Graph/EdgePropertiesPanel'
 import GraphToolbar from '@/components/Graph/GraphToolbar'
 import type { GraphNode, GraphEdge } from '@/types'
 
+echarts.use([
+  TooltipComponent,
+  LegendComponent,
+  GraphChart,
+  CanvasRenderer,
+  LabelLayout
+])
+
+type EChartsOption = echarts.ComposeOption<
+  TooltipComponentOption | LegendComponentOption | GraphSeriesOption
+>
+
 const GraphViewPage = () => {
   const { graphId } = useParams<{ graphId: string }>()
   const queryClient = useQueryClient()
+  const chartRef = useRef<HTMLDivElement>(null)
+  const chartInstanceRef = useRef<echarts.EChartsType | null>(null)
   const [selectedNodes, setSelectedNodes] = useState<string[]>([])
   const [selectedEdges, setSelectedEdges] = useState<string[]>([])
   const [selectedNode, setSelectedNode] = useState<GraphNode | null>(null)
   const [selectedEdge, setSelectedEdge] = useState<GraphEdge | null>(null)
   const [isTableViewOpen, setIsTableViewOpen] = useState(false)
   const [activeTab, setActiveTab] = useState<'nodes' | 'edges'>('nodes')
-  const [highlightMode, setHighlightMode] = useState<'direct' | 'extended'>('direct') // 新增高亮模式状态
-  const [isSelectionLocked, setIsSelectionLocked] = useState(false) // 锁定选择状态
+  const [highlightMode, setHighlightMode] = useState<'direct' | 'extended'>('direct')
+  const [isSelectionLocked, setIsSelectionLocked] = useState(false)
+
+  // Convert backend data to ECharts format
+  const transformDataForECharts = (nodes: GraphNode[], edges: GraphEdge[]) => {
+    // Create category color mapping
+    const uniqueTypes = Array.from(new Set(nodes.map(node => node.type || 'default')))
+    const categoryColors = ['#4dabf7', '#ff6b6b', '#51cf66', '#ffd43b', '#9775fa', '#ff8cc8', '#74c0fc', '#ffa8a8']
+    
+    const categories = uniqueTypes.map((type, index) => ({ 
+      name: type,
+      itemStyle: {
+        color: categoryColors[index % categoryColors.length]
+      }
+    }))
+
+    const echartsNodes = nodes.map(node => {
+      const categoryIndex = uniqueTypes.indexOf(node.type || 'default')
+      const baseColor = categoryColors[categoryIndex % categoryColors.length]
+      
+      return {
+        id: String(node.id), // Ensure ID is string
+        name: node.label || node.id,
+        category: categoryIndex,
+        x: node.x,
+        y: node.y,
+        symbolSize: Math.max(20, Math.min(60, (node.value || 30))),
+        value: node.value || 1,
+        itemStyle: {
+          color: selectedNodes.includes(String(node.id)) ? '#ff6b6b' : baseColor,
+          borderColor: selectedNodes.includes(String(node.id)) ? '#d63031' : '#ffffff',
+          borderWidth: selectedNodes.includes(String(node.id)) ? 3 : 1
+        },
+        label: {
+          show: true,
+          position: 'right',
+          formatter: '{b}',
+          fontSize: 12,
+          color: '#333'
+        }
+      }
+    })
+
+    const echartsLinks = edges.map((edge, index) => {
+      // Debug each edge
+      if (index < 3) {
+        console.log(`Edge ${index}:`, edge)
+        console.log('Source:', edge.source, 'Target:', edge.target)
+      }
+      
+      return {
+        source: String(edge.source || ''), // Ensure source is string
+        target: String(edge.target || ''), // Ensure target is string
+        name: edge.label || '',
+        value: edge.weight || 1
+      }
+    }).filter(link => link.source && link.target) // Remove invalid links
+
+    return { nodes: echartsNodes, links: echartsLinks, categories }
+  }
 
   const { data: graphData, isLoading, error } = useQuery({
     queryKey: ['graph', graphId],
     queryFn: () => graphsApi.getGraph(graphId!),
     enabled: !!graphId,
   })
+
+  // Function to extract edges from different possible structures
+  const extractEdges = (data: any) => {
+    if (!data) return []
+    
+    // Try different possible edge locations and structures
+    const possibleEdges = data.edges || data.links || data.relationships || data.connections || []
+    
+    // If edges exist but have different property names, try to normalize them
+    return possibleEdges.map((edge: any, index: number) => {
+      // Handle different possible property names for source/target
+      const source = edge.source || edge.from || edge.start_node || edge.source_id || edge.sourceId
+      const target = edge.target || edge.to || edge.end_node || edge.target_id || edge.targetId
+      
+      // Debug first few edges
+      if (index < 3) {
+        console.log(`Processing edge ${index}:`, edge)
+        console.log(`Extracted source: ${source}, target: ${target}`)
+      }
+      
+      return {
+        ...edge,
+        source: source,
+        target: target,
+        id: edge.id || `${source}-${target}`,
+        label: edge.label || edge.name || edge.type || '',
+        type: edge.type || 'default'
+      }
+    }).filter((edge: any) => edge.source && edge.target) // Filter out invalid edges
+  }
+
+  // Extract nodes and edges early to avoid initialization issues
+  const nodes = graphData?.data?.nodes || []
+  const edges = extractEdges(graphData?.data)
+  
+  // Debug the extracted data
+  console.log('Full graphData response:', graphData)
+  console.log('Extracted data:', {
+    graphData: graphData?.data,
+    nodes: nodes.length,
+    edges: edges.length,
+    firstEdge: edges[0]
+  })
+  
+  // Check if edges might be in a different location
+  if (graphData?.data) {
+    console.log('All keys in graphData.data:', Object.keys(graphData.data))
+    if (edges.length === 0) {
+      console.log('Checking for alternative edge locations...')
+      console.log('graphData.data.links:', graphData.data.links)
+      console.log('graphData.data.relationships:', graphData.data.relationships)
+      console.log('graphData.data.connections:', graphData.data.connections)
+    }
+  }
 
   const handleNodeSelect = (nodeId: string) => {
     const node = nodes.find(n => n.id === nodeId)
@@ -75,7 +210,7 @@ const GraphViewPage = () => {
       })
       
       setSelectedNodes(Array.from(directNodeIds))
-      setSelectedEdges(directEdges.map(edge => edge.id))
+      setSelectedEdges(directEdges.map(edge => edge.id || `${edge.source}-${edge.target}`))
     } else {
       // 扩展模式：高亮二跳邻居（邻居的邻居）
       const firstHopEdges = edges.filter(edge => 
@@ -103,7 +238,7 @@ const GraphViewPage = () => {
       const allRelevantEdges = [...firstHopEdges, ...secondHopEdges]
       
       setSelectedNodes(Array.from(allExtendedNodes))
-      setSelectedEdges(allRelevantEdges.map(edge => edge.id))
+      setSelectedEdges(allRelevantEdges.map(edge => edge.id || `${edge.source}-${edge.target}`))
     }
   }
 
@@ -115,7 +250,7 @@ const GraphViewPage = () => {
     if (highlightMode === 'direct') {
       // 直接模式：只高亮边连接的两个节点和当前边
       setSelectedNodes([edge.source, edge.target])
-      setSelectedEdges([edge.id])
+      setSelectedEdges([edge.id || `${edge.source}-${edge.target}`])
     } else {
       // 扩展模式：高亮边连接的节点以及这些节点的所有邻居
       const sourceEdges = edges.filter(e => 
@@ -143,7 +278,7 @@ const GraphViewPage = () => {
       })
       
       setSelectedNodes(Array.from(relatedNodeIds))
-      setSelectedEdges(Array.from(allRelatedEdges).map(e => e.id))
+      setSelectedEdges(Array.from(allRelatedEdges).map(e => e.id || `${e.source}-${e.target}`))
     }
   }
 
@@ -157,6 +292,175 @@ const GraphViewPage = () => {
     setSelectedNodes([])
     setSelectedEdges([])
   }
+
+  // Initialize ECharts when data is available
+  useEffect(() => {
+    if (!chartRef.current || !nodes || !edges) return
+
+    // Debug logging
+    console.log('Raw data:', { nodes: nodes.length, edges: edges.length })
+    console.log('Sample edge:', edges[0])
+    console.log('First few edges:', edges.slice(0, 3))
+    console.log('Edge keys:', edges[0] ? Object.keys(edges[0]) : 'No edges')
+
+    // Dispose previous chart instance if exists
+    if (chartInstanceRef.current) {
+      chartInstanceRef.current.dispose()
+    }
+
+    const chart = echarts.init(chartRef.current)
+    chartInstanceRef.current = chart
+
+    // Transform data for ECharts
+    const { nodes: echartsNodes, links: echartsLinks, categories } = transformDataForECharts(nodes, edges)
+    
+    // Debug transformed data
+    console.log('ECharts data:', { 
+      nodes: echartsNodes.length, 
+      links: echartsLinks.length,
+      sampleLink: echartsLinks[0]
+    })
+    
+    // Check if all edge sources and targets have corresponding nodes
+    const nodeIds = new Set(echartsNodes.map(n => n.id))
+    const invalidLinks = echartsLinks.filter(link => 
+      !nodeIds.has(link.source) || !nodeIds.has(link.target)
+    )
+    if (invalidLinks.length > 0) {
+      console.warn('Invalid links found:', invalidLinks)
+    }
+
+    const option: EChartsOption = {
+      tooltip: {
+        trigger: 'item',
+        formatter: (params: any) => {
+          if (params.dataType === 'node') {
+            const categoryName = categories[params.data.category]?.name || 'Unknown'
+            return `节点: ${params.data.name}<br/>ID: ${params.data.id}<br/>类型: ${categoryName}<br/>值: ${params.data.value}`
+          } else if (params.dataType === 'edge') {
+            return `边: ${params.data.name || '连接'}<br/>从: ${params.data.source}<br/>到: ${params.data.target}`
+          }
+          return ''
+        }
+      },
+      legend: [{
+        data: categories.map(cat => cat.name),
+        top: 10,
+        left: 10,
+        orient: 'horizontal',
+        itemGap: 20,
+        textStyle: {
+          fontSize: 12,
+          color: '#333'
+        },
+        selectedMode: 'multiple', // Enable legend selection
+        selector: [
+          {
+            type: 'all',
+            title: '全选'
+          },
+          {
+            type: 'inverse',
+            title: '反选'
+          }
+        ]
+      }],
+      series: [{
+        name: '知识图谱',
+        type: 'graph',
+        layout: 'force',
+        data: echartsNodes,
+        links: echartsLinks,
+        categories: categories,
+        roam: true,
+        force: {
+          repulsion: 800,
+          gravity: 0.1,
+          edgeLength: 200,
+          layoutAnimation: true
+        },
+        label: {
+          show: true,
+          position: 'right',
+          formatter: '{b}'
+        },
+        labelLayout: {
+          hideOverlap: true
+        },
+        scaleLimit: {
+          min: 0.4,
+          max: 2
+        },
+        lineStyle: {
+          color: 'source',
+          curveness: 0.3
+        },
+        emphasis: {
+          focus: 'adjacency',
+          lineStyle: {
+            width: 4
+          }
+        }
+      }]
+    }
+
+    chart.setOption(option)
+    
+    // Debug: Log the final option
+    console.log('Final ECharts option:', {
+      seriesData: option.series[0].data.length,
+      seriesLinks: option.series[0].links.length,
+      categories: option.series[0].categories.length
+    })
+
+    // Handle click events
+    chart.on('click', (params: any) => {
+      if (params.dataType === 'node') {
+        const clickedNode = nodes.find(n => n.id === params.data.id)
+        if (clickedNode) {
+          handleNodeClick(clickedNode)
+        }
+      } else if (params.dataType === 'edge') {
+        // Find edge by source and target match
+        const clickedEdge = edges.find(e => 
+          (e.source === params.data.source && e.target === params.data.target) ||
+          (e.source === params.data.target && e.target === params.data.source)
+        )
+        if (clickedEdge) {
+          handleEdgeClick(clickedEdge)
+        }
+      }
+    })
+
+    // Handle window resize
+    const handleResize = () => {
+      chart.resize()
+    }
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup
+    return () => {
+      window.removeEventListener('resize', handleResize)
+      if (chartInstanceRef.current) {
+        chartInstanceRef.current.dispose()
+        chartInstanceRef.current = null
+      }
+    }
+  }, [nodes, edges, selectedNodes, selectedEdges])
+
+  // Update chart when selection changes
+  useEffect(() => {
+    if (!chartInstanceRef.current || !nodes || !edges) return
+
+    const { nodes: echartsNodes, links: echartsLinks, categories } = transformDataForECharts(nodes, edges)
+    
+    chartInstanceRef.current.setOption({
+      series: [{
+        data: echartsNodes,
+        links: echartsLinks
+      }]
+    })
+  }, [selectedNodes, selectedEdges, nodes, edges])
 
   if (isLoading) {
     return (
@@ -177,7 +481,7 @@ const GraphViewPage = () => {
     )
   }
 
-  const { title, description, nodes, edges } = graphData.data
+  const { title, description } = graphData.data
 
   return (
     <div className="h-screen flex flex-col overflow-hidden">
@@ -384,14 +688,10 @@ const GraphViewPage = () => {
         </div>
 
         <div className="flex-1" style={{ position: 'relative', minHeight: '500px' }}>
-          <GraphCanvas
-            nodes={nodes}
-            edges={edges}
-            onNodeClick={handleNodeClick}
-            onEdgeClick={handleEdgeClick}
-            onCanvasClick={handleCanvasClick}
-            selectedNodes={selectedNodes}
-            selectedEdges={selectedEdges}
+          <div 
+            ref={chartRef} 
+            className="w-full h-full"
+            onClick={handleCanvasClick}
           />
         </div>
 
